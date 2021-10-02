@@ -3,7 +3,7 @@ Shell 00
 
 4
 
-Chapter III
+Chapter III
 Exercise 00 : Z
 Exercise 00
 Only the best know how to display Z
@@ -11,7 +11,7 @@ Turn-in directory : ex00/
 Files to turn in : z
 Allowed functions : None
 
-• Create a file called z that returns "Z", followed by a new line, whenever the command
+Create a file called z that returns "Z", followed by a new line, whenever the command
 cat is used on it.
 ?>cat z
 Z
@@ -19,7 +19,7 @@ Z
 
 5
 
-Chapter IV
+Chapter IV
 Exercise 01 : testShell00
 Exercise 01
 What are attributes anyway ?
@@ -27,24 +27,24 @@ Turn-in directory : ex01/
 Files to turn in : testShell00.tar
 Allowed functions : None
 
-• Create a file called testShell00 in your submission directory.
-• Figure out a way for the output to look like this (except for the “total 1” line):
+Create a file called testShell00 in your submission directory.
+Figure out a way for the output to look like this
+(except for the “total 1” line):
 %> ls -l
 total 1
 -r--r-xr-x 1 XX XX 40 Jun 1 23:42 testShell00
 %>
 
-• Once you’ve achieved the previous steps, execute the following command to create
-the file to be submitted: tar -cf testShell00.tar testShell00.
+Once you’ve achieved the previous steps, execute the following command to
+create the file to be submitted: tar -cf testShell00.tar testShell00.
 
 Don’t worry about what you’ve got instead of "XX".
 
-A year will be accepted instead of the time, on the timestamp of the
-file.
+A year will be accepted instead of the time, on the timestamp of the file.
 
 6
 
-Chapter V
+Chapter V
 Exercise 02 : Oh yeah, mooore...
 Exercise 02
 Oh yeah, mooore...
@@ -55,6 +55,7 @@ Allowed functions : None
 Create the following files and directories.
 Do what’s necessary so that when you use the ls -l command in your directory,
 the output will looks like this :
+
 %> ls -l
 total XX
 drwx--xr-x	2	XX XX Jun 1 20:47 test0
@@ -66,7 +67,8 @@ dr-x---r--	2	XX XX Jun 1 22:45 test2
 lrwxr-xr-x	1	XX 5 Jun 1 22:20 test6 -> test0
 
 
-Once you’ve done that, run tar -cf exo2.tar * to create the file to be submitted.
+Once you’ve done that, run tar -cf exo2.tar * to create the file to be
+submitted.
 
 Don’t worry about what you’ve got instead of "XX".
 
@@ -94,7 +96,7 @@ Those commands will be of use later, so try not to forget them!
 
 8
 
-Chapter VII
+Chapter VII
 Exercise 04 : midLS
 Exercise 04
 midLS
@@ -102,10 +104,11 @@ Turn-in directory : ex04/
 Files to turn in : midLS
 Allowed functions : None
 
-• In a midLS file, place the command line that will list all files and directories in your
-current directory (except for hidden files or any file that starts by a dot - yes, that
-includes double-dots), separated by a comma, by order of creation date. Make sure
-directories’ names are followed by a slash character.
+In a midLS file, place the command line that will list all files and
+directories in your current directory (except for hidden files or any file
+that starts by a dot - yes, that includes double-dots), separated by a comma,
+by order of creation date.
+Make sure directories’ names are followed by a slash character.
 
 What has not been asked for should not be done!
 
@@ -113,7 +116,7 @@ RTFM!
 
 9
 
-Chapter VIII
+Chapter VIII
 Exercise 05 : GiT commit
 Exercise 05
 GiT commit?
@@ -121,7 +124,8 @@ Turn-in directory : ex05/
 Files to turn in : git_commit.sh
 Allowed functions : None
 
-• Create a shell script that displays the ids of the last 5 commits of your git repository.
+Create a shell script that displays the ids of the last 5 commits of your git
+repository.
 %> bash git_commit.sh | cat -e
 baa23b54f0adb7bf42623d6d0a6ed4587e11412a$
 2f52d74b1387fa80eea844969e8dc5483b531ac1$
