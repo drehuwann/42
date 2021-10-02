@@ -1,157 +1,6 @@
 C Piscine
 Shell 00
 
-Summary: This document is the subject for the Shell 00 module of the C Piscine @ 42.
-
-Contents
-I
-
-Instructions
-
-2
-
-II
-
-Foreword
-
-3
-
-III
-
-Exercise 00 : Z
-
-5
-
-IV
-
-Exercise 01 : testShell00
-
-6
-
-V
-
-Exercise 02 : Oh yeah, mooore...
-
-7
-
-VI
-
-Exercise 03 : Connect me!
-
-8
-
-VII
-
-Exercise 04 : midLS
-
-9
-
-VIII
-
-Exercise 05 : GiT commit
-
-10
-
-IX
-
-Exercise 06 : gitignore
-
-11
-
-X
-
-Exercise 07 : diff
-
-12
-
-XI
-
-Exercise 08 : clean
-
-13
-
-XII
-
-Exercise 09 : Illusions, not tricks, Michael...
-
-14
-
-1
-
-Chapter I
-Instructions
-• Only this page will serve as reference; do not trust rumors.
-• Watch out! This document could potentially change up to an hour before submission.
-• These exercises are carefully laid out by order of difficulty - from easiest to hardest.
-We will not take into account a successfully completed harder exercise if an easier
-one is not perfectly functional.
-• Make sure you have the appropriate permissions on your files and directories.
-• You have to follow the submission procedures for every exercise.
-• Your exercises will be checked and graded by your fellow classmates.
-• On top of that, your exercises will be checked and graded by a program called
-Moulinette.
-• Moulinette is very meticulous and strict in its evaluation of your work. It is entirely
-automated and there is no way to negotiate with it. So if you want to avoid bad
-surprises, be as thorough as possible.
-• Exercises in Shell must be executable with /bin/sh.
-• You cannot leave any additional file in your directory than those specified in the
-subject.
-• Got a question? Ask your peer on the right. Otherwise, try your peer on the left.
-• Your reference guide is called Google / man / the Internet / ....
-• Check out the "C Piscine" part of the forum on the intranet.
-• Examine the examples thoroughly. They could very well call for details that are
-not explicitly mentioned in the subject...
-
-2
-
-Chapter II
-Foreword
-Here are the lyrics for City Hunter’s theme song "Moonlight Shadow":
-The last time ever she saw him
-Carried away by a moonlight shadow
-He passed on worried and warning
-Carried away by a moonlight shadow.
-Lost in a riddle that Saturday night
-Far away on the other side.
-He was caught in the middle of a desperate fight
-And she couldn’t find how to push through
-The trees that whisper in the evening
-Carried away by a moonlight shadow
-Sing a song of sorrow and grieving
-Carried away by a moonlight shadow
-All she saw was a silhouette of a gun
-Far away on the other side.
-He was shot six times by a man on the run
-And she couldn’t find how to push through
-[Chorus]
-I stay, I pray
-See you in Heaven far away...
-I stay, I pray
-See you in Heaven one day.
-Four A.M. in the morning
-Carried away by a moonlight shadow
-I watched your vision forming
-Carried away by a moonlight shadow
-A star was glowing in the silvery night
-Far away on the other side
-Will you come to talk to me this night
-But she couldn’t find how to push through
-[Chorus]
-3
-
-C Piscine
-
-Shell 00
-
-Far away on the other side.
-Caught in the middle of a hundred and five
-The night was heavy and the air was alive
-But she couldn’t find how to push through
-Carried away by a moonlight shadow
-Carried away by a moonlight shadow
-Far away on the other side.
-Unfortunately, this topic has nothing to do with City Hunter.
-
 4
 
 Chapter III
@@ -203,40 +52,21 @@ Turn-in directory : ex02/
 Files to turn in : exo2.tar
 Allowed functions : None
 
-• Create the following files and directories. Do what’s necessary so that when you
-use the ls -l command in your directory, the output will looks like this :
+Create the following files and directories.
+Do what’s necessary so that when you use the ls -l command in your directory,
+the output will looks like this :
 %> ls -l
 total XX
-drwx--xr-x
--rwx--xr-dr-x---r--r-----r--rw-r----x
--r-----r-lrwxr-xr-x
-%>
+drwx--xr-x	2	XX XX Jun 1 20:47 test0
+-rwx--xr--	1	XX 4 Jun 1 21:46 test1
+dr-x---r--	2	XX XX Jun 1 22:45 test2
+-r-----r--	2	XX 1 Jun 1 23:44 test3
+-rw-r----x	1	XX 2 Jun 1 23:43 test4
+-r-----r--	2	XX 1 Jun 1 23:44 test5
+lrwxr-xr-x	1	XX 5 Jun 1 22:20 test6 -> test0
 
-2
-1
-2
-2
-1
-2
-1
 
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-
-XX XX Jun 1 20:47 test0
-XX 4 Jun 1 21:46 test1
-XX XX Jun 1 22:45 test2
-XX 1 Jun 1 23:44 test3
-XX 2 Jun 1 23:43 test4
-XX 1 Jun 1 23:44 test5
-XX 5 Jun 1 22:20 test6 -> test0
-
-• Once you’ve done that, run tar -cf exo2.tar * to create the file to be submitted.
+Once you’ve done that, run tar -cf exo2.tar * to create the file to be submitted.
 
 Don’t worry about what you’ve got instead of "XX".
 
@@ -245,7 +75,7 @@ files.
 
 7
 
-Chapter VI
+Chapter VI
 Exercise 03 : Connect me!
 Exercise 03
 Kerberos
@@ -253,10 +83,10 @@ Turn-in directory : ex03/
 Files to turn in : klist.txt
 Allowed functions : None
 
-• Make sure you have a valid (non-expired) Kerberos ticket. If you don’t have one
+Make sure you have a valid (non-expired) Kerberos ticket. If you don’t have one
 yet, get one.
-• Once you’ve got at least one Kerberos ticket, write a list of all your tickets into a
-file named klist.txt
+Once you’ve got at least one Kerberos ticket, write a list of all your tickets
+into a file named klist.txt
 
 The file’s name was not chosen randomly.
 
