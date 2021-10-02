@@ -1,0 +1,11 @@
+Authenticating as principal root/admin@KRB5.4T2.ORG with password.
+kadmin.local:  K/M@KRB5.4T2.ORG
+kadmin/admin@KRB5.4T2.ORG
+kadmin/changepw@KRB5.4T2.ORG
+krbtgt/KRB5.4T2.ORG@KRB5.4T2.ORG
+kadmin.local:  Enter password for principal "ftt_user@KRB5.4T2.ORG": 
+Re-enter password for principal "ftt_user@KRB5.4T2.ORG": 
+Principal "ftt_user@KRB5.4T2.ORG" created.
+kadmin.local:
+
+##CLUE : ftt_user pw is an alias of ftt

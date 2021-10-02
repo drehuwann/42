@@ -1,0 +1,6 @@
+Ticket cache: FILE:/tmp/krb5cc_1001
+Default principal: ftt_user@KRB5.4T2.ORG
+
+Valid starting     Expires            Service principal
+10/02/21 12:12:34  10/02/21 20:12:34  krbtgt/KRB5.4T2.ORG@KRB5.4T2.ORG
+	renew until 10/03/21 12:12:22

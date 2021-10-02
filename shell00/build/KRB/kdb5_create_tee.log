@@ -1,0 +1,7 @@
+Loading random data
+Initializing database '/var/lib/krb5kdc/principal' for realm 'KRB5.4T2.ORG',
+master key name 'K/M@KRB5.4T2.ORG'
+You will be prompted for the database Master Password.
+It is important that you NOT FORGET this password.
+Enter KDC database master key: 
+Re-enter KDC database master key to verify: 

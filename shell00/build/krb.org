@@ -1,0 +1,24 @@
+made locally krb5 server:
+copy of *.conf files (path included as '#Begin *.conf') in ./KRB/
+made /etc/krb5kdc directory : #>mkdir /etc/krb5kdc
+made create database : #>kdb5_util create -s | tee ./KRB/kdb5_create_tee.log
+copied /etc/krb5kdc/kadm5.acl -> ./KRB/kadm5.acl
+
+Started kdc :
+#>krb5kdc (warn : stash uses encrypt method des3-cbc-sha1 deprecated)
+#>kadmind
+
+Connect kadmin :
+#>kadmin.local | tee ./KRB/kadmin_local_tee.log
+
+Added "127.0.0.1     kdc.krb5.4t2.org" in /etc/hosts
+
+$>kinit ftt_user | tee ./KRB/kinit_ftt_user_tee.log
+
+Verifying :
+$>klist | tee klist_tee.log
+
+! Ticket received !!!
+
+See https://www.kerberos.org/software/adminkerberos.pdf/
+

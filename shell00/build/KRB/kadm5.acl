@@ -1,0 +1,5 @@
+# Begin /etc/krb5kdc/kadm5.acl
+
+*/admin@KRB5.4T2.ORG	*
+
+# End /etc/krb5kdc/kadm5.acl

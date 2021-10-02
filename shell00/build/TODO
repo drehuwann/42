@@ -1,0 +1,7 @@
+in ex02 the symbolic link have linux permissions 777.
+Changing this is not straightforward under this os
+2 solutions to try :
+  under OsX, link permissions could be changed.
+  Tried with C (seen man2 chmod() and others) -> didn't work
+
+  
