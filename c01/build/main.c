@@ -25,7 +25,7 @@ void pf_testArrayOfInt()
   ft_rev_int_tab(a2, 9);
   for (int k = 0; k < 9; k++)
     {
-      if (a1[k] == 2 * k)
+      if (a2[k] == 2 * k)
 	write(1, "Y", 1);
       else
 	write(1, "N", 1);
