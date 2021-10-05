@@ -1,0 +1,17 @@
+#!/bin/sh
+DBLQT=`echo -e '\0042'`
+ANTISL=`echo -e '\0134'`
+QUEST=`echo -e '\0077'`
+DOLLAR=`echo -e '\0044'`
+STAR=`echo -e '\0052'`
+QUOTE=`echo -e '\0047'`
+
+BEG=$DBLQT$ANTISL$QUEST$DOLLAR$STAR$QUOTE
+END=$QUOTE$STAR$DOLLAR$QUEST$ANTISL$DBLQT
+
+NAME=`echo -e MaRVIN`
+
+FILENAME=../ex05/$BEG$NAME$END
+
+printf '42' > $FILENAME
+

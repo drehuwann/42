@@ -1,0 +1,188 @@
+C Piscine
+Shell 01
+
+Summary: This document is the subject for the module Shell 01 of the
+C Piscine @ 42.
+
+Chapter III
+Exercise 00 : Exam
+Exercise : 00
+Exam
+
+During the week, you will be able to sign up for Friday’s exam in the agenda,
+don’t forget.
+You also have to register for the Exam00 project.
+Make sure you’ve registered for the exam (the event AND the project !).
+Make sure you’ve made sure you’ve registered for the exam (the event AND the
+project ! Yep, both !).
+
+4
+
+Chapter IV
+Exercise 01 : print_groups
+Exercise 01
+print_groups.sh
+Turn-in directory : ex01/
+Files to turn in : print_groups.sh
+Allowed functions : None
+
+Write a command line that will display the list of groups for which the login,
+contained in the environment variable FT_USER , is a member.
+Separated by commas without spaces.
+
+Examples :
+
+for FT_USER=nours, the result is "god,root,admin,master,nours,bocal" (without
+quotation marks)
+$>./print_groups.sh
+god,root,admin,master,nours,bocal$>
+
+for FT_USER=daemon, the result is "daemon,bin" (without quotation marks)
+$>./print_groups.sh
+daemon,bin$>
+
+man id
+
+5
+
+Chapter V
+Exercise 02 : find_sh
+Exercise 02
+find_sh.sh
+Turn-in directory : ex02/
+Files to turn in : find_sh.sh
+Allowed functions : None
+
+Write a command line that searches for all file names that end with ".sh"
+(without quotation marks) in the current directory and all its
+sub-directories. It should display only the file names without the .sh.
+
+Example of output :
+
+$>./find_sh.sh | cat -e
+find_sh$
+file1$
+file2$
+file3$
+$>
+
+6
+
+Chapter VI
+Exercise 03 : count_files
+Exercise 03
+count_files.sh
+Turn-in directory : ex03/
+Files to turn in : count_files.sh
+Allowed functions : None
+
+Write a command line that counts and displays the number of regular files and
+directories in the current directory and all its sub-directories. It should
+include ".", the starting directory.
+
+Example of output :
+
+$>./count_files.sh | cat -e
+42$
+$>
+
+7
+
+Chapter VII
+Exercise 04 : MAC
+Exercise 04
+MAC.sh
+Turn-in directory : ex04/
+Files to turn in : MAC.sh
+Allowed functions : None
+
+Write a command line that displays your machine’s MAC addresses.
+Each address must be followed by a line break.
+
+man ifconfig
+
+8
+
+Chapter VIII
+Exercise 05 : Can you create it ?
+Exercise 05
+Can you create it ?
+Turn-in directory : ex05/
+Files to turn in : "\?$*’MaRViN’*$?\"
+Allowed functions : None
+
+Create a file containing only "42", and NOTHING else. Its name will be :
+
+"\?$*'MaRViN'*$?\"
+
+Example :
+
+$>ls -lRa *MaRV* | cat -e
+-rw---xr-- 1 75355 32015 2 Oct 2 12:21 "\?$*'MaRViN'*$?\"$
+$>
+
+9
+
+Chapter IX
+Exercise 06 : Skip
+Exercise 06
+skip.sh
+Turn-in directory : ex06/
+Files to turn in : skip.sh
+Allowed functions : None
+
+Write a command line that displays every other line for the command ls -l,
+starting from the first line.
+
+10
+
+Chapter X
+Exercise 07 : r_dwssap
+Exercise 07
+r_dwssap.sh
+Turn-in directory : ex07/
+Files to turn in : r_dwssap.sh
+Allowed functions : None
+
+Write a command line that displays the output of a cat /etc/passwd command,
+removing comments, every other line starting from the second line, reversing
+each login, sorted in reverse alphabetical order, and keeping only logins
+between FT_LINE1 and FT_LINE2 included, and they must separated by ", "
+(without quotation marks), and the output must end with a ".".
+
+Example: Between lines 7 and 15, the result should be something like this :
+$> ./r_dwssap.sh
+sstq_, sorebrek_brk_, soibten_, sergtsop_, scodved_, rlaxcm_, rgmecived_, revreswodniw_, revressta_
+.$>
+
+Rigorously follow the order indicated in the instructions.
+
+11
+
+Chapter XI
+Exercise 08 : add_chelou
+Exercise 08
+add_chelou.sh
+Turn-in directory : ex08/
+Files to turn in : add_chelou.sh
+Allowed functions : None
+
+Write a command line that takes numbers from variables FT_NBR1, in ’\"?! \
+base, and FT_NBR2, in mrdoc base, and displays the sum of both in \
+gtaio luSnemf base.
+
+Example 1:
+FT_NBR1=\'?"\"'\
+FT_NBR2=rcrdmddd
+
+The sum is :
+Salut
+
+Example 2 :
+FT_NBR1=\"\"!\"\"!\"\"!\"\"!\"\"!\"\"
+FT_NBR2=dcrcmcmooododmrrrmorcmcrmomo
+
+The sum is :
+Segmentation fault
+
+12
