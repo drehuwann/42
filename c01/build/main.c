@@ -33,6 +33,20 @@ void pf_testArrayOfInt()
   write(1, "\n", 1);
 }
 
+void pf_testSortIntArray()
+{
+  int arr2tst[12] = {25, 12, 16, 5, 20, 2, 1, 14, 4, 21, 30, 3};
+  ft_sort_int_tab(arr2tst, 12);
+  for (int i = 1; i < 12; i++)
+    {
+      if ( arr2tst[i] < arr2tst[i-1] )
+	write(1, "N", 1);
+      else
+	write(1, "Y", 1);
+    }
+  write(1, "\n", 1);
+}
+
 int main()
 {
   int i = 0;
@@ -77,4 +91,6 @@ int main()
   pf_test42(ft_strlen("") + 42); // Test (strlen(nullString) == 0)
   ft_putstr("Tests tableaux pairs et impairs ...\n");
   pf_testArrayOfInt();
+  ft_putstr("Test de tri dichotomique de tableau de int ...\n");
+  pf_testSortIntArray();
 }                           
