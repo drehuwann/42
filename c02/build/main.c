@@ -57,4 +57,18 @@ int main()
   pf_test42(42 + i);
   i = ft_str_is_printable("rasta\\totoulos"); // \t = \0x09 = TABul.
   pf_test42(41 + i);
+  char str[16] = "azErtyUIoP!@#$%";
+  pf_test42(42 + strcmp(ft_strupcase(str), "AZERTYUIOP!@#$%"));
+  pf_test42(42 + strcmp(ft_strlowcase(str), "azertyuiop!@#$%"));
+  char s1[62] ="salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+  char s2[62] ="Salut, Comment Tu Vas ? 42mots Quarante-Deux; Cinquante+Et+Un";
+  char *ret = ft_strcapitalize(s1);
+  pf_test42(42 + strcmp(ret, s2));
+  char s3[10] = ".........";
+  pf_test42(sizeof(s2) - ft_strlcpy(s3, s2, 6) + 41);
+  pf_test42(42 + strcmp("Salut\0", s3));
+  ft_putstr_non_printable("Coucou\ntu vas bien ?");
+  write (1, "\n", 1);
+
+  ft_print_memory((void*)strSrc, 249);
 }                           
