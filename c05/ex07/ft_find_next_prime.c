@@ -1,4 +1,4 @@
-int ft_is_prime(int nb)
+int pf_is_prime(int nb)
 {
   //returns 1 = true; 0 = false
   //algo from rosetta.org
@@ -10,4 +10,11 @@ int ft_is_prime(int nb)
     if ( !(nb % p) )
       return 0;
   return 1;
+}
+
+int ft_find_next_prime(int nb)
+{
+  while ( !pf_is_prime(nb) )
+    nb ++;
+  return nb;
 }

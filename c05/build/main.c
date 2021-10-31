@@ -35,5 +35,14 @@ int main()
   pf_test42(41 + ft_sqrt(1));
   pf_test42(42 + ft_sqrt(-16));
   pf_test42(12387 - ft_sqrt(12345*12345));
+  pf_test42(42 + ft_is_prime(0));
+  pf_test42(42 + ft_is_prime(1));
+  pf_test42(41 + ft_is_prime(2));
+  pf_test42(41 + ft_is_prime(3));
+  pf_test42(42 + ft_is_prime(4));
+  pf_test42(42 + ft_is_prime(1005));
+  pf_test42(41 + ft_is_prime(3541));
+  pf_test42(ft_find_next_prime(42) - 1);
+  pf_test42(ft_find_next_prime(3734) - 3697); //3739
   //  write(1, "\n", 1);
 }        
