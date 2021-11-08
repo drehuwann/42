@@ -44,5 +44,6 @@ int main()
   pf_test42(41 + ft_is_prime(3541));
   pf_test42(ft_find_next_prime(42) - 1);
   pf_test42(ft_find_next_prime(3734) - 3697); //3739
+  pf_test42(ft_ten_queens_puzzle() - 682);
   //  write(1, "\n", 1);
 }        
