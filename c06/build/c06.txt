@@ -1,0 +1,69 @@
+C Piscine
+C 06
+
+Summary: This document is the subject for the module C 06 of the C Piscine @ 42.
+
+Chapter III
+Exercise 00 :
+ft_print_program_name
+Turn-in directory : ex00/
+Files to turn in : ft_print_program_name.c
+Allowed functions : write
+
+We’re dealing with a program here, you should therefore have a function main
+in your .c file.
+Create a program that displays its own name.
+Example :
+$>./a.out
+./a.out
+$>
+
+5
+
+Chapter IV
+Exercise 01 : ft_print_params
+Turn-in directory : ex01/
+Files to turn in : ft_print_params.c
+Allowed functions : write
+
+We’re dealing with a program here, you should therefore have a function main in
+your .c file.
+Create a program that displays its given arguments.
+One per line, in the same order as in the command line.
+It should display all arguments, except for argv[0].
+Example :
+$>./a.out test1 test2 test3
+test1
+test2
+test3
+$>
+
+6
+
+Chapter V
+Exercise 02 : ft_rev_params
+Turn-in directory : ex02/
+Files to turn in : ft_rev_params.c
+Allowed functions : write
+
+We’re dealing with a program here, you should therefore have a function main in
+your .c file.
+Create a program that displays its given arguments.
+One per line, in the reverse order of the command line.
+It should display all arguments, except for argv[0].
+
+7
+
+Chapter VI
+Exercise 03 : ft_sort_params
+Turn-in directory : ex03/
+Files to turn in : ft_sort_params.c
+Allowed functions : write
+
+We’re dealing with a program here, you should therefore have a function main in
+your .c file.
+Create a program that displays its given arguments sorted by ascii order.
+It should display all arguments, except for argv[0].
+One argument per line.
+
+8
