@@ -1,0 +1,234 @@
+C Piscine
+Rush 00
+
+Chapter III
+Main subject
+Exercise 00
+Rush0X
+Turn-in directory : ex00/
+Files to turn in : main.c, ft_putchar.c, rush0X.c
+Allowed functions : write
+
+Files to submit: main.c, ft_putchar.c and your rush0X.c, ’0X’ represents the
+rush number. For example rush00.c.
+Example of main.c :
+main()
+
+int
+{
+  rush(5, 5);
+  return (0);
+}
+
+You must therefore create the function rush taking two variables of type int as
+arguments, named respectively x and y.
+Your function rush should display (on-screen) a rectangle of x characters for
+width, and y characters for length.
+Your main will be modified during defense, to check if you’ve handled
+everything you’re supposed to. Here’s an example of test we’ll perform :
+
+int
+{
+  main()
+  rush(123, 42);
+  return (0);
+}
+
+6
+
+Chapter IV
+Rush 00
+rush(5,3) should display :
+$>./a.out
+o---o
+|   |
+o---o
+$>
+
+rush(5, 1) should display :
+$>./a.out
+o---o
+$>
+
+rush(1, 1) should display :
+$>./a.out
+o
+$>
+
+rush(1, 5) should display :
+$>./a.out
+o
+|
+|
+|
+o
+$>
+
+7
+
+C Piscine
+
+Rush 00
+
+rush(4, 4) should display :
+$>./a.out
+o--o
+|  |
+|  |
+o--o
+$>
+
+8
+
+Chapter V
+Rush 01
+rush(5,3) should display :
+$>./a.out
+/***\
+*   *
+\***/
+$>
+
+rush(5, 1) should display :
+$>./a.out
+/***\
+$>
+
+rush(1, 1) should display :
+$>./a.out
+/
+$>
+
+rush(1, 5) should display :
+$>./a.out
+/
+*
+*
+*
+\
+$>
+
+• rush(4, 4) should display :
+$>./a.out
+/**\
+*  *
+*  *
+\**/
+$>
+
+9
+
+Chapter VI
+Rush 02
+
+rush(5,3) should display :
+$>./a.out
+ABBBA
+B   B
+CBBBC
+$>
+
+rush(5, 1) should display :
+$>./a.out
+ABBBA
+$>
+
+rush(1, 1) should display :
+$>./a.out
+A
+$>
+
+rush(1, 5) should display :
+$>./a.out
+A
+B
+B
+B
+C
+$>
+
+rush(4, 4) should display :
+$>./a.out
+ABBA
+B  B
+B  B
+CBBC
+$>
+
+10
+
+Chapter VII
+Rush 03
+rush(5,3) should display :
+$>./a.out
+ABBBC
+B   B
+ABBBC
+$>
+
+rush(5, 1) should display :
+$>./a.out
+ABBBC
+$>
+
+rush(1, 1) should display :
+$>./a.out
+A
+$>
+
+rush(1, 5) should display :
+$>./a.out
+A
+B
+B
+B
+A
+$>
+
+rush(4, 4) should display :
+$>./a.out
+ABBC
+B  B
+B  B
+ABBC
+$>
+
+11
+
+Chapter VIII
+Rush 04
+rush(5,3) should display :
+$>./a.out
+ABBBC
+B   B
+CBBBA
+$>
+
+rush(5, 1) should display :
+$>./a.out
+ABBBC
+$>
+
+rush(1, 1) should display :
+$>./a.out
+A
+$>
+
+rush(1, 5) should display :
+$>./a.out
+A
+B
+B
+B
+C
+$>
+
+rush(4, 4) should display :
+$>./a.out
+ABBC
+B  B
+B  B
+CBBA
+$>
+
+12
