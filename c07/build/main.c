@@ -28,9 +28,32 @@ int main (void)
   char *returnedStringPtr = ft_strdup("Quarante-Deux");
   pf_test42 ( 42 + pf_strcmp(returnedStringPtr, "Quarante-Deux") );
   if (returnedStringPtr)
-    free(returnedStringPtr);
+    {
+      free(returnedStringPtr);
+      returnedStringPtr = 0;
+    }
   int *returnedIntPtr = ft_range(40, 43);
+  int *toFree = returnedIntPtr;
   pf_test42(2 + *returnedIntPtr ++);
   pf_test42(1 + *returnedIntPtr ++);
-  pf_test42(*returnedIntPtr);  
+  pf_test42(*returnedIntPtr);
+  if (toFree)
+    {
+      free(toFree);
+      toFree= 0;
+    }
+  int *range = 0;
+  int **ultimateRange = &range;
+  pf_test42(41 + ft_ultimate_range(ultimateRange, 42, 42) + !(*ultimateRange));
+  pf_test42(39 + ft_ultimate_range(ultimateRange, 40, 43));
+  int *p_range = *ultimateRange;
+  toFree = p_range;
+  pf_test42(2 + *p_range ++);
+  pf_test42(1 + *p_range ++);
+  pf_test42(*p_range);
+  if (toFree)
+    {
+      free(toFree);
+      toFree = 0;
+    }
 }
