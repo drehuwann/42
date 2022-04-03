@@ -84,4 +84,52 @@ int main (void)
       free(returnedStringPtr);
       returnedStringPtr = 0;
     }
+  pf_test42(42 + (ft_convert_base("abcd", "bacd+", "dabc") != NULL));
+  returnedStringPtr = ft_convert_base("--++--2ag42", "0123456789abcdef",
+				      "0123456789");
+  pf_test42(42 + pf_strcmp(returnedStringPtr, "42"));
+  if (returnedStringPtr)
+    {
+      free(returnedStringPtr);
+      returnedStringPtr = 0;
+    }
+  returnedStringPtr = ft_convert_base("--++-2a#", "0123456789abcdef",
+				      "0123456789");
+  pf_test42(42 + pf_strcmp(returnedStringPtr, "-42"));
+  if (returnedStringPtr)
+    {
+      free(returnedStringPtr);
+      returnedStringPtr = 0;
+    }
+  char *nonWritableStr = (char*)malloc(4 * sizeof(*nonWritableStr));
+  nonWritableStr[0] = '-';
+  nonWritableStr[1] = 4;
+  nonWritableStr[2] = 2;
+  nonWritableStr[3] = 0;
+  char *nonWritableBase = (char*)malloc(11 * sizeof(nonWritableBase));
+  nonWritableBase[0] = '0';
+  for (int i = 1; i < 9; ++i)
+    {
+      nonWritableBase[i] = i;
+    } 
+  nonWritableBase[9] = '9'; // char 0x09 is tabulation
+  nonWritableBase[10] = 0;
+  returnedStringPtr = ft_convert_base( "---+2ak", "0123456789abcdef",
+				      nonWritableBase);
+  pf_test42(42 + pf_strcmp(returnedStringPtr, nonWritableStr));
+  if (returnedStringPtr)
+    {
+      free(returnedStringPtr);
+      returnedStringPtr = 0;
+    }  
+  if (nonWritableBase)
+    {
+      free(nonWritableBase);
+      nonWritableBase = 0;
+    }
+  if (nonWritableStr)
+    {
+      free(nonWritableStr);
+      nonWritableStr = 0;
+    }
 }
