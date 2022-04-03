@@ -61,15 +61,15 @@ int main (void)
   strArray[1] = ft_strdup("fois");
   strArray[2] = ft_strdup("sept");
   strArray[3] = ft_strdup("42");
-  char sepa = 0x20;
-  returnedStringPtr = ft_strjoin(0, strArray, &sepa);
+  char* sepa = " ";
+  returnedStringPtr = ft_strjoin(0, strArray, sepa);
   pf_test42(41 + ((char)*returnedStringPtr == 0));
   if (returnedStringPtr)
     {
       free(returnedStringPtr);
       returnedStringPtr = 0;
     }
-  returnedStringPtr = ft_strjoin(4, strArray, &sepa);
+  returnedStringPtr = ft_strjoin(4, strArray, sepa);
   pf_test42(42 + pf_strcmp(returnedStringPtr, "six fois sept 42"));
   if (returnedStringPtr)
     {

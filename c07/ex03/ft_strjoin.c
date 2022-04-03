@@ -20,22 +20,30 @@ char *ft_strjoin(int size, char **strs, char *sep)
     }
   else
     {
+      if (sep)
+	{
+	  int sepSize = pf_strLength(sep);
+	  bigStrSize += (size - 1) * sepSize;
+	}
       for (int i = 0; i < size; i++)
 	bigStrSize += pf_strLength(*strs++);
-      if (sep) bigStrSize += size - 1;
       bigStrSize ++; // Adds room for null-termination
       toReturn = malloc(sizeof(*toReturn) * bigStrSize);
       char *pToChar = (char*)toReturn; 
       for (int i = 0 ; i < size; i++)
 	{
-	  char charToWrite = *firstStr[i];
+	  char *strToJoin = firstStr[i];
+	  char charToWrite = *strToJoin;
 	  while (charToWrite)
 	    {
 	      *pToChar ++ = charToWrite;
-	      charToWrite = *++firstStr[i];
+	      charToWrite = *++strToJoin;
 	    }
 	  if ((sep) && (i < size - 1))
-	    while (*sep) *pToChar ++ = *sep ++;
+	    {
+	      char *p_sep = sep;
+	      while (*p_sep) *pToChar ++ = *p_sep ++;
+	    }
 	}
       *pToChar = 0; // null-terminate string
     }
