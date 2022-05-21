@@ -132,4 +132,42 @@ int main (void)
       free(nonWritableStr);
       nonWritableStr = 0;
     }
+  char **Array = ft_split("%%six#.fois%%%%sept.egalent#quarante-deux...",
+			  ".#%");
+  pf_test42(42 + pf_strcmp(Array[0], "six") + pf_strcmp(Array[1], "fois") +
+	    pf_strcmp(Array[2], "sept") + pf_strcmp(Array[3], "egalent") +
+	    pf_strcmp(Array[4], "quarante-deux") + (Array[5] != 0));
+  for (int i = 0; i < 5; ++i)
+    {
+      if (Array[i])
+	{
+	  free(Array[i]);
+	  Array[i] = 0;
+	}
+
+    }
+  if (Array)
+    {
+      free(Array);
+      Array = 0;
+    }  
+
+  Array = ft_split("six#.fois%%%%sept.egalent#quarante-deux...", ".#%");
+  pf_test42(42 + pf_strcmp(Array[0], "six") + pf_strcmp(Array[1], "fois") +
+	    pf_strcmp(Array[2], "sept") + pf_strcmp(Array[3], "egalent") +
+	    pf_strcmp(Array[4], "quarante-deux") + (Array[5] != 0));
+  for (int i = 0; i < 5; ++i)
+    {
+      if (Array[i])
+	{
+	  free(Array[i]);
+	  Array[i] = 0;
+	}
+
+    }
+  if (Array)
+    {
+      free(Array);
+      Array = 0;
+    }  
 }
