@@ -118,7 +118,8 @@ It should keep the order of av.
 The returned array should allocated in memory and its last element’s str set to
 0, this will mark the end of the array.
 It should return a NULL pointer if an error occurs.
-We’ll test your function with our ft_show_tab (next exercise). Make it work according to this !
+We’ll test your function with our ft_show_tab (next exercise). Make it work
+according to this !
 
 Chapter VIII
 Exercise 05 : ft_show_tab
