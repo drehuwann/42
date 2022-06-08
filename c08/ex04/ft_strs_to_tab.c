@@ -26,8 +26,14 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 {
   t_stock_str *toRet = NULL;
   if (ac <= 0) return toRet;
-  toRet = (t_stock_str *)malloc(ac * sizeof(t_stock_str));
+  toRet = (t_stock_str *)malloc((ac + 1) * sizeof(t_stock_str));
   if (toRet == NULL) return toRet;
+  // now toRet is valid so immediately null-terminates it :
+  toRet[ac].str = NULL;
+  // next is optionnal, but is best, for coherence :
+  toRet[ac].size = 0;
+  toRet[ac].copy = NULL;
+  // now we can safely decrement ac to iterate : 
   t_stock_str *p_toRet = toRet;
   while (ac > 0)
     {
@@ -41,6 +47,5 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
       ++ av;
       ++ p_toRet;
     }
-  p_toRet->str = NULL; // puts str ref = 0 on last record.
   return toRet;
 }
