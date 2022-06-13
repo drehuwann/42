@@ -1,0 +1,240 @@
+PHP Piscine
+Day 00
+ Your reference guide is called Google / the Internet /
+https://www.php.net / ....
+
+Chapter 3
+Exercise
+
+00 : Basics or home
+
+Turn-in directory : ex00/
+Files to turn in: basics.html
+Allowed functions: n/a
+
+Note: We consider that for all of today’s assignments you have watched
+the introduction video to HTML/CSS and that you won’t use a prepackaged answer for the exercises but you will do your best to learn
+both HTML and CSS.
+
+We will start with something simple. If you’re struggling too much,
+take a break, go home and come back when you are feeling better.
+
+Create a web page that contains the following elements:
+
+A pink background (”Pink ? what’s wrong with pink ?”). Be
+cautious, this is not a random color choice.
+
+A page title that contains ”Basics” (we’re talking about the one
+visible on the browser tab).
+
+A big title in white, centered, that contains at least one
+accent (e.g.: é, í).
+
+Two images side by side representing online shops.
+
+Under each image, a link to the corresponding website.
+
+Under the links, a horizontal line that separates the page (no
+matter the size of the window).
+
+Finally, under this line, aligned on the right side of the page,
+in italic and with a monospace font family, the copyright
+symbol, your login, and the current year. (”© ol 2014”).
+
+P.S.: this exercise should be consumed with moderation.
+
+
+Chapter 4
+Exercise
+
+01 : Mendeleev
+
+Turn-in directory : ex01/
+Files to turn in: mendeleev.html
+Allowed functions: n/a
+
+Create a webpage that represents the Mendeleev’s complete periodic
+table of the elements (the current version). The constraints are as
+follows:
+
+• The page must contain at least one image. Of course, putting an
+image of the periodic table doesn’t count, just display one to
+make your page prettier!
+
+• You need to add some colours to make everything even more
+beautiful!
+
+• Each cell in the periodic table must contain:
+◦ The symbol of the element in the middle, in bold and in a
+big font size.
+
+◦ The atomic number and the atomic weight of the element in a
+smaller font size, respectively in the bottom left and
+bottom right hand corners.
+
+• You must be able to modify the content of the table directly in
+the source code while defending your project.
+
+5
+
+Chapter 5
+Exercise
+
+02 : Day of the 42
+
+Turn-in directory : ex02/
+Files to turn in: doft.html doft.css resources/
+Allowed functions: n/a
+
+Local foreword:
+
+”I feel like I could...
+
+like I could...
+
+like I
+
+could... TAKE ON THE WORLD!!”
+
+Reproduce identically and precisely the web page of the fictional game
+”Day of the 42” for which you have an image below and in the resources.
+In order to achieve this, you must use all of the images provided in
+the resources (no more, no less).
+Pay attention to details:
+
+the position of elements, the font sizes
+
+and families, the colours, etc.
+
+In addition to the identical reproduction of the page, you must implement the following :
+
+• The reload.png image, which title and alt must be ”Start from the
+beginning” should be a link and redirect to www.disney.com
+
+• The close.gif image, which <title> and alt must be ”Disconnect”
+should be a link and redirect to www.relaischateaux.com
+
+• The five images on the left side of the page must be titled (and
+”alted”) respectively ”Move”, ”Take”, ”Look”, ”Use” and ”Speak”.
+
+• In the central image, you must create a clickable area (a link)
+on the middle chair of the first row (the second one from the
+right) that should redirect to www.ikea.com
+
+• In the central image, you must create a clickable area (a link)
+on the first screen of the first row (first one from the right)
+that should redirect to www.apple.com
+
+• The three elements on the right must have a title and an alt of
+your choosing.
+
+6
+
+Figure 5.1: ”Day of the 42” page
+
+7
+
+Chapter 6
+Exercise
+
+03 : The shrunk agent
+
+Turn-in directory : ex03/
+Files to turn in: responsive.html responsive.css
+Allowed functions: n/a
+
+Like most Russians at some paranoid time in History, Dimitri Mendeleev
+was an agent. If he wasn’t at the origin of the former important press
+outfit (TASS agency), however, he started to shrink in time too. His
+periodic table did as well. Copy your periodic table from the first
+exercise and make it responsive to the browser resizing. The periodic
+table must shrink, the text as well.
+Do as you wish but do not listen to the Javascript pros that will say
+that it can’t be done without it. Stay on CSS and wait for day09 for
+the JS.
+
+8
+
+Chapter 7
+Exercise
+
+04 : SNCF* Sandwich
+
+Turn-in directory : ex04/
+Files to turn in: menu.html menu.css
+Allowed functions: n/a
+
+A train leaves Paris for Lyon on September 12th 1985, the day of a
+lunar eclipse. It rides at 216 km/h, the wind blows S/SE at a factor
+5, and the temperature outside the train is 13°C, and 22°C inside. The
+sky is cloudy. Another train leaves Lyon for Paris, on the same day
+at 23:00. It is riding at 224km/h.
+This is actually not the topic of this exercise, almost.
+
+The objective of this assignment is to create menus, plenty of them
+to present what the train restaurant has to offer.
+
+In a navigation, you must implement a multitude of dropdown menus with
+a minimum of:
+
+• Three dropdown menus, each containing a minimum of 4 clickable
+items.
+
+• One dropdown menu that contains 4 clickable items and another
+dropdown menu in which there will also be at least 4 clickable
+items.
+
+• One dropdown menu (with at least 4 items) which also contains a
+dropdown menu (with at least 4 items) which itself contains a
+dropdown menu in which there will be at least 4 clickable items.
+(We heard you liked dropdown menus).
+The layout of your dropdown menus and the opening direction of their
+content is at your discretion, as long as it stays coherent! Although
+aesthetics are subjective, try your best to make it nice!
+
+You are only allowed to use HTML and CSS (no Javascript or other
+shenanigans).
+
+*(French National Railway Company)
+9
+
+Chapter 8
+Exercise
+
+05 : SCUMM
+
+Turn-in directory : ex05/
+Files to turn in: scumm.html *
+Allowed functions: n/a
+
+Ok, so you’ve done a pretty interface for your game ”Day of the 42”,
+but it would be great to be able to actually play it. Create a ministory and make it playable.
+You cannot use a web server, your game must be playable with only HTML
+and CSS files. As usual, Javascript is not allowed.
+
+We consider a game playable if it has the following features:
+
+• The player can navigate to different places and the central
+image changes when the location changes.
+
+• The player can combine the actions in the left banner with
+interactive areas on the central image.
+
+• The player can get information on an item when using the ”Look”
+action.
+
+• The player can take an item using the ”Take” action and it will
+be added in the inventory, in the right banner.
+
+• The player can use the items from the inventory using the ”Use”
+action.
+
+• The player can interact with a NPC using the ”Speak” action.
+You will have extra points if you implement more features!
+
+The submission file will be the entrypoint of your game. You can add
+all the additional files that you need. Be creative!
+
+10
+
+

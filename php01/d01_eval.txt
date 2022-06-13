@@ -1,0 +1,311 @@
+!
+
+
+
+0
+
+!
+
+search...
+
+thakala
+
+Have a problem?
+
+Menu
+
+ My projects
+
+
+
+
+ Holy Graph
+
+SCALE FOR PROJECT PISCINE PHP / DAY 01
+
+ List projects
+
+You should evaluate 1 student in this team
+
+
+ Available Cursus
+Git repository
+
+Your projects
+
+
+
+git@vogsphere-v2.hive.fi:vogsphere/intra-uuid-91d5058a-1de8-4173-b483-270c586c2dfc-4088107-cchen
+
+
+ Day 01
+ Day 02
+
+
+
+
+Guidelines
+
+ Day 03
+
+You already know how peer2peer evaluation work by now and during
+this PHP Piscine, it works as any other Piscine projects you have evaluated
+so far. Take the time to discuss the assignments and to make sure that
+the evaluated has understood the notions of the day.
+
+ Day 04
+ C Exam Alone In The Dark Beginner
+ ft_printf
+
+
+
+Attachments
+
+ init
+
+ Introduction to PHP (EN subs)
+
+ Piscine PHP
+
+Introduction to PHP (EN subs)
+
+ Subject  Resources
+
+Preliminaries
+Now we're getting serious, this is the first evaluation of the day of PHP! There are a lot of exercises, you will have to
+manage your time accordingly. Execute the simplest, fastest and most efficient tests. Be careful, this evaluation form
+won't necessarily tell you what to test, you have to come up with your own! As you most likely have created a bunch
+of them for your own assignments, feel free to re-use them. Once an exercise is wrong, the evaluation must stop but
+you can still discuss the rest of the assignments.
+
+The basics
+- The whole team must be present.
+- Only grade the work that is in the student or group's GiT
+repository.
+- You must use Chrome for this defense.
+- If there is nothing in the repository, the evaluation stops here.
+Discuss what went wrong and how to avoid facing the same
+situation tomorrow.
+ Yes
+
+ No
+
+The easy ones
+Ex00 - HW
+The program must display "Hello World" with a newline.
+If not, the evaluation stops here.
+ Yes
+
+ No
+
+Ex01 - mlX
+Execute wc -c to check that the php script has less than
+100 characters (the whole file, everything included).
+Carefully check that there are exactly 1000 X characters displayed,
+not 999, not 1001.
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+Ex02 - To the divine
+The program must ask for a number in the command line and
+indicate if it's odd or even.
+The program outputs the right answer for different numbers (only integers).
+An error message must be displayed when the user input contains nothing or something else that numbers.
+The messages must be exactly as in the subject.
+
+Test at least the examples provided in the subject.
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+Ex03 - ft_split
+Execute the examples provided in the subject and then make
+your own tests.
+The function must return all different words, without space and
+sorted.
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+Ex04 - aff_param
+Execute the examples provided in the subject and then make
+your own tests.
+The program must not display its own name and must not sort
+the arguments.
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+The less so easy ones
+Ex05 - epur_str
+Execute the examples provided in the subject and then make
+your own tests.
+There must be only one space between each words and no space
+at all at the beginning and at the end of the string.
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+Ex06 - SSAP
+Execute the examples provided in the subject and then make
+your own tests.
+The program must have the right behaviour no matter how many
+arguments you provide. They must be sorted by ASCII order.
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+Ex07 - rostring
+Execute the examples provided in the subject and then make
+your own tests.
+The program must display the first argument (only) but with
+the first word at the end. It must behave like "epur_str".
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+Ex08 - ft_is_sort
+Execute the examples provided in the subject and then make
+your own tests.
+The function must detect if the provided array is in ASCII
+Order. Ascending and descending order are both accepted.
+('a', 'b', 'c' = OK and 'c', 'b', 'a' = OK)
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+A bit more difficult
+Ex09 - SSAP2
+Execute the examples provided in the subject and then make
+your own tests.
+The different parameters must be splitted into words (separated
+by spaces). They must be sorted in the specific order
+explained in the subject. The comparison is made character
+by character :
+az < a4 < a# < Cb < 42 < 5v < _foo <= _FOO
+
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+Ex10 - do_op
+Execute the examples provided in the subject and then make
+your own tests.
+The program is not supposed to handle formatting errors (it should
+however handle an incorrect number of parameters). Division by
+0 should not be handled either.
+Check with three properly formatted arguments, containing spaces.
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+Ex11 - do_op_2
+Execute the examples provided in the subject and then make
+your own tests.
+If the number of arguments is incorrect, the program should
+display an error message. An input wrongly formatted should
+generate an error message. Division by 0 should not be handled.
+ Yes
+
+ No
+
+Ex12 - search_it!
+Execute the examples provided in the subject and then make
+your own tests. The program should have acceptable behaviour.
+If there's a mistake, the evaluation stops here.
+ Yes
+
+ No
+
+Ex13 - The hesitating agent
+Execute the examples provided in the subject and then make
+your own tests.
+Check that the following test have the right result:
+
+$> cat peer_notes_2.csv | ./agent_stats.php average
+9.9787234042553
+cat peer_notes_2.csv | ./agent_stats.php average_user
+adam_e:9.5263157894737
+bertrand_y:7.45
+bruce_w:12.45
+clark_k:11.416666666667
+david_a:8.5714285714286
+dexter_m:11.75
+didier_f:10.761904761905
+francois_h:10.045454545455
+georges_b:9.5263157894737
+hans_z:10.666666666667
+[.....]
+nicolas_s:9.8333333333333
+olivier_z:8.4285714285714
+roxane_e:11.545454545455
+sandra_n:10.88
+steve_j:8.695652173913
+trevor_r:8.8571428571429
+$> cat peer_notes_2.csv | ./agent_stats.php moulinette_variance
+adam_e:3.5263157894737
+bertrand_y:-12.55
+bruce_w:-0.55
+clark_k:-7.5833333333333
+david_a:-3.4285714285714
+dexter_m:-1.25
+[...]
+ludovic_k:-3.4736842105263
+maelle_m:8.0454545454545
+marcel_j:10.95
+marie_c:4.5294117647059
+mathieu_c:1.9411764705882
+melissa_v:-8
+michel_r:5.4
+nicolas_s:-9.1666666666667
+olivier_z:5.4285714285714
+roxane_e:6.5454545454545
+sandra_n:0.88
+steve_j:2.695652173913
+trevor_r:-2.1428571428571
+
+ Yes
+
+ No
+
+Ratings
+Don’t forget to check the flag corresponding to the defense
+
+ Ok
+ Empty work
+
+ Cheat
+
+d Crash
+
+l Forbidden function
+
+Conclusion
+Leave a comment on this evaluation
+
+Finish evaluation
+
+Privacy policy
+
+Terms of use for video surveillance
+
+Rules of procedure
+
+Declaration on the use of cookies
+
+General term of use of the site
+
+Legal notices
+
+

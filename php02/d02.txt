@@ -1,0 +1,586 @@
+PHP Piscine
+Day 02
+
+Staff 42 pedago@42.fr
+
+Summary:
+This document is the day02's subject for the PHP Piscine.
+
+Contents
+1
+
+Foreword
+
+2
+
+2
+
+General Instructions
+
+3
+
+3
+
+Exercise 00 : Another World
+
+4
+
+4
+
+Exercise 01 : One more time
+
+5
+
+5
+
+Exercice 02 : The magnifying glass
+
+6
+
+6
+
+Exercise 03 : Who are you ?
+
+7
+
+7
+
+Exercise 04 : Photo booklet
+
+8
+
+8
+
+Exercise 05 : In the D(e)nial
+
+9
+
+9
+
+Exercise 06 : The Parchment
+
+11
+
+10
+
+Postamble
+
+13
+
+1
+
+Chapter 1
+Foreword
+"I realized the moment I fell into the fissure, that the book would
+not be destroyed as I had planned.
+
+It continued falling into that
+
+starry expanse, of which I had only a fleeting glimpse. I have tried
+to speculate where it might have landed, and I must admit however,
+such conjecture is futile.
+
+Still, questions about whose hands might
+
+one day hold my Books are unsettling to me. I know my apprehensions
+might never be allayed... and so I close, realizing that perhaps the
+ending has not yet been written."
+
+2
+
+Chapter 2
+General Instructions
+• Only this page will serve as reference; do not trust rumors.
+• Watch out! This document could potentially change up to an hour
+before submission.
+
+• Only the work submitted on the repository will be accounted for
+during peer-2-peer correction.
+
+• As when you did C Piscine, your exercises will be corrected by
+your peers AND/OR by Moulinette.
+
+• Moulinette is very meticulous and strict in its evaluation of
+your work. It is entirely automated and there is no way to
+negotiate with it. So if you want to avoid bad surprises, be as
+thorough as possible.
+
+• Using a forbidden function is considered cheating. Cheaters get
+-42, and this grade is non-negotiable.
+
+• These exercises are carefully laid out by order of difficulty from easiest to hardest. We will not take into account a
+successfully completed harder exercise if an easier one is not
+perfectly functional.
+
+• You cannot leave any additional file in your repository than
+those specified in the subject.
+
+• Got a question? Ask your peer on the right. Otherwise, try your
+peer on the left.
+
+• Your reference guide is called Google / the Internet /
+http://www.php.net / ....
+
+• Think of discussing on the Forum. The solution to your problem
+is probably there already. Otherwise you will start the
+conversation.
+
+• Examine the examples thoroughly. They could very well call for
+details that are not explicitly mentioned in the subject …
+
+• By Odin, by Thor ! Use your brain !!!
+
+3
+
+Chapter 3
+Exercise
+
+00 : Another World
+
+Turn-in directory : ex00/
+Files to turn in: another_world.php
+Allowed functions: The whole standard PHP library especially regexp
+
+I do not know where I landed. I just woke up, I’m lying in the grass
+and I see the sky above the treetops.
+
+I’m lost.
+
+The Book is near
+
+me. It could have been worse; I could find myself leaning on my desk
+appearing suddenly in the middle of a gigantic pool inhabited by a
+kraken. Fortunately this is not the case. I began to explore around.
+This world is different. The relation with the surrounding space is
+very strange.
+
+Sometimes we make a single step, but in reality it's
+
+like we're making eight. I started to lose the habit of slowing down.
+Everywhere there were varied combinations of normal space and strange
+spaces, I decided to set a single normal space.
+
+The book seems to
+
+dedicate a whole chapter, using the terms ' ' and '\t', to respectively
+designate natural spaces and strange spaces.
+
+$> ./another_world.php "This
+
+sentence
+
+contains spaces and
+
+some
+
+tabulations"
+This sentence contains spaces and some tabulations
+$> ./another_world.php
+$> ./another_world.php "
+
+This arg
+
+is
+
+used
+
+" "but not this
+
+one"
+
+This arg is used
+$>
+
+Note:
+
+I have found a kind of rocky headland.
+
+I’m on an island!
+
+I
+
+don't know how I got there or how I’ll get out of it. But tomorrow is
+another day.
+
+4
+
+Chapter 4
+Exercise
+
+01 : One more time
+
+Turn-in directory : ex01/
+Files to turn in: one_more_time.php
+Allowed functions: The whole standard PHP library and lot of regexp
+
+A new day, still stuck on this damn island.
+we exactly?
+
+Besides, what day are
+
+Time does not have the same meaning here obviously.
+
+I
+
+notice, flipping the book that some inscriptions could correspond to
+dates. I will try to decipher them. Midday: this is it! I found it.
+These inscriptions are systematically of the following form:
+Day_of_the_week Number_of_day Month Year Hours:Minutes:Seconds
+The day of the week is complete, full, sometimes with an uppercase
+at the beginning, and in French.
+2 characters.
+
+The day’s number is always 1 or
+
+The month is expressed in words, sometimes also with
+
+a capital letter at the beginning, and always in French.
+consists of 4 digits.
+of 2 figures.
+
+The Year
+
+Finally, hours, minutes and seconds are all
+
+There are 4 spaces to separate 5 pieces.
+
+I will now
+
+be able to identify more easily if some passages correspond to dates,
+and convert them to a more rational mode and more readable form: the
+number of seconds past since January 1, 1970.
+
+OOC: Yes, there is a reason why the days of the week and
+months are not in English. Look online if you need a bit of
+help with the translation.
+
+$> ./one_more_time.php "Mardi 12 Novembre 2013 12:02:21"
+1384254141
+$> ./one_more_time.php "Mercreday 1stJuily 99"
+Wrong Format
+$> ./one_more_time.php
+$>
+
+Note: I have never encountered well formatted dates that are incoherent.
+
+5
+
+Chapter 5
+Exercice
+
+02 : The magnifying glass
+
+Turn-in directory : ex02/
+Files to turn in: magnifying_glass.php
+Allowed functions: The whole standard PHP library
+
+This morning, examining the binding of the Book, I noticed a small
+recess. Inside I gently pulled out a small magnifying glass. It was
+really very special.
+
+At first I thought it did not make anything
+
+bigger. But by trying it on several pages, I noticed that it only made
+bigger the links to other pages of the Book, by simply putting everything in uppercase! I had to process each page one by one to see it.
+
+$> cat > page.html
+<html><head><title>Nice page</title></head>
+<body>Hello World <a href=http://cyan.com title="a link">This is a link</a>
+<br /><a href=http://www.riven.com> And this too <img src=wrong.image title="
+And also this"></a>
+</body></html>
+^D
+$> ./magnifying_glass.php page.html > new_page.html
+$> cat new_page.html
+<html><head><title>Nice page</title></head>
+<body>Hello World <a href=http://cyan.com title="A LINK">THIS IS A LINK</a>
+<br /><a href=http://www.riven.com> AND THIS TOO <img src=wrong.image title="
+AND ALSO THIS"></a>
+</body></html>
+$>
+
+6
+
+Chapter 6
+Exercise
+
+03 : Who are you ?
+
+Turn-in directory : ex03/
+Files to turn in: who.php
+Allowed functions: No use of system call 'who'
+
+I am not alone!
+
+There are people on this island!
+
+I got proof this
+
+morning following a footprint in the forest area. I found myself nose
+to nose with a strange individual, who seemed also amazed by this
+meeting like me. I asked him who he was, but I only got snippets of
+words like “utmp” and other elusive grunts. Afraid, he left quickly.
+Perhaps it will take time but soon, I will know where we are and why
+I’m here. I noted in the Book, each of my meetings.
+
+$> ./who.php
+boulon
+
+console
+
+Mar 25 09:08
+
+boulon
+
+ttys001
+
+Mar 25 10:24
+
+boulon
+
+ttys002
+
+Mar 25 10:48
+
+boulon
+
+ttys003
+
+Mar 25 16:30
+
+boulon
+
+console
+
+Mar 25 09:08
+
+boulon
+
+ttys001
+
+Mar 25 10:24
+
+boulon
+
+ttys002
+
+Mar 25 10:48
+
+boulon
+
+ttys003
+
+Mar 25 16:30
+
+$> who
+
+$>
+
+Note: I think it’s me. I mean, I think the person I met was me. But
+in a different temporal and spatial dimension. What a disappointment!
+I am beginning to lose all hope to leave this place.
+
+7
+
+Chapter 7
+Exercise
+
+04 : Photo booklet
+
+Turn-in directory : ex04/
+Files to turn in: photos.php
+Allowed functions: The whole standard PHP library and curl
+
+I tried to make some drawings on the blank pages at the end of the
+Book but it was useless.
+
+Only the words could remain, my sketches
+
+disappeared in less time than it took me to draw them. That’s when I
+started to dedicate a page to a precise description of a particular
+location on the island, that, the unpredictable happens. I had hardly
+written the name of the place as title, when a whole set of pictures
+of this place started to fill the page. This book takes pictures! I
+was able to list all the points of interest of my new home. This Book
+is undoubtedly very surprising!
+
+$> ls
+photos.php
+$> ./photos.php "http://www.42.fr"
+$> ls
+photos.php
+www.42.fr/
+$> ls www.42.fr/
+42_logo_black.svg
+home_big.jpg
+$>
+
+Note: I realize nevertheless that the pictures are not taken at random.
+It’s only when there is, in a place, a form of tag characterized by 3
+letters I, M and G, that the picture is taken.
+
+8
+
+Chapter 8
+Exercise
+
+05 : In the D(e)nial
+
+Turn-in directory : ex05/
+Files to turn in: denial.php
+Allowed functions: The whole standard PHP library
+
+I can’t take it anymore.
+to wake up.
+
+I have been dreaming for too long.
+
+I have
+
+This island can only exist in my imagination.
+
+Such a
+
+strange and tortured place can’t be real.
+
+I don’t want to open the
+
+book anymore, I don’t want to do anymore puzzles.
+
+The latest:
+
+ev-
+
+erything I wrote to remember of my real life was found mixed between
+the same three pages. I had to continually re-order my ideas, only to
+remember the name and surname of my friends. At the price of a long and
+laborious effort, I was able by means of a unique identifier, deceive
+the Book and regroup the scattered information.
+
+By writing "display
+
+the name of login XXX", the Book finds me the information sought.
+
+$> ./denial.php data.csv pseudo
+Enter your command: echo $name['miawallace']."\n";
+Naline
+Enter your command: ^D
+$> ./denial.php data.csv
+$> ./denial.php invalid_file login
+$> ./denial.php data.csv invalid_header_key
+$>
+
+9
+
+$> ./denial.php data.csv firstname
+Enter your command: echo $firstname['Nestor']." ".$last_name['Nestor']." is a
+beautiful name\n";
+Nestor Derire is a beautiful name
+Enter your command: echo $IP['Sarah']."\n";
+10.252.33.76
+Enter your command: print_r(explode(".", $IP['Xavier'])); echo "\n";
+Array
+(
+[0] => 172
+[1] => 20
+[2] => 45
+[3] => 200
+)
+Enter your command: toto titi tutu
+PHP Parse error:
+
+syntax error, unexpected T_STRING in [....]
+
+Enter your command: ^D
+$>
+
+Note: Are they really my friends? I can no longer put a face to these
+names. Everything vanishes, everything escapes me...
+
+10
+
+Chapter 9
+Exercise
+
+06 : The Parchment
+
+Turn-in directory : ex06/
+Files to turn in: srt.php
+Allowed functions: The whole standard PHP library
+
+I found a sort of parchment yesterday on what I call the northern coast
+of the island ; near a large crevasse from which I cannot even see the
+bottom. This should rejoice me to know that there are or there have
+been others like me here. I’m too depressed and I really paid attention
+only this morning.
+
+The parchment consists of incomprehensible text
+
+snippets interspersed with precise time stamps (I know how to recognize it now). There are however inconsistencies. Some hours are not
+in order. I am not sure if I really want to solve this new puzzle, yet…
+
+$> cat > test.srt
+1
+00:01:15,308 --> 00:01:16,717
+This
+2
+00:01:21,473 --> 00:01:23,614
+test
+3
+00:01:19,750 --> 00:01:21,373
+a
+4
+00:01:16,817 --> 00:01:19,650
+is
+^D
+
+11
+
+$> ./srt.php test.srt
+1
+00:01:15,308 --> 00:01:16,717
+This
+2
+00:01:16,817 --> 00:01:19,650
+is
+3
+00:01:19,750 --> 00:01:21,373
+a
+4
+00:01:21,473 --> 00:01:23,614
+test
+$>
+
+Note: I returned to the crevasse.
+
+I understand now.
+
+parchment, everything is clear now.
+either for the Book, nor me.
+
+12
+
+I decoded the
+
+There is nothing else to do,
+
+Chapter 10
+Postamble
+"I realized the moment I fell into the fissure, that the book would
+not be destroyed as I had planned.
+
+It continued falling into that
+
+starry expanse, of which I had only a fleeting glimpse. I have tried
+to speculate where it might have landed, and I must admit however,
+such conjecture is futile.
+
+Still, questions about whose hands might
+
+one day hold my Books are unsettling to me. I know my apprehensions
+might never be allayed... and so I close, realizing that perhaps the
+ending has not yet been written."
+
+13
+
+
