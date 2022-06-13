@@ -7,7 +7,7 @@ void ft_putnbr(int nb)
 {
   if (nb == 0)
   {
-    write(1, "0", 1);
+    if (write(1, "0", 1)) {}
     return;
   }
   int negative = (nb < 0); // negative=0 -> positive; negative=1 -> negative
@@ -40,6 +40,6 @@ void ft_putnbr(int nb)
   while (pRevStr != debutRevStr)
   {
     pRevStr--;
-    write(1, pRevStr, 1);
+    if (write(1, pRevStr, 1)) {}
   }
 }

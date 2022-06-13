@@ -17,7 +17,7 @@ void pf_printByte(unsigned char c)
   toPrint[1] = pf_Hex(c % 16);
   toPrint[0] = pf_Hex(c / 16);
   for (int i = 0; i < 2; i++)
-    write(1, &toPrint[i], 1);
+    if (write(1, &toPrint[i], 1)) {}
 }
 
 void pf_printAddr(unsigned long long ull)
@@ -29,7 +29,7 @@ void pf_printAddr(unsigned long long ull)
       ull /= 16;
     }
   for (int i = 0; i < 16; i++)
-    write(1, &toPrint[i], 1);
+    if (write(1, &toPrint[i], 1)) {}
 }
 
 void pf_printDumpLine(void *addr, unsigned int size)
@@ -39,13 +39,13 @@ void pf_printDumpLine(void *addr, unsigned int size)
   unsigned char charToWrite = 0 ;
   unsigned char *savAddr= (unsigned char*)addr;
   pf_printAddr((unsigned long long)addr);
-  write(1, ":", 1);
-  write(1, " ", 1);
+  if (write(1, ":", 1)) {}
+  if (write(1, " ", 1)) {}
   for (unsigned int i = 0; i < size; i ++)
     {
       pf_printByte( *((unsigned char*)addr) );
       if ( i % 2 != 0 )
-	write(1, " ", 1);
+	if (write(1, " ", 1)) {}
       (unsigned char*)addr ++;
     }
   if ( size < 16 )
@@ -53,16 +53,16 @@ void pf_printDumpLine(void *addr, unsigned int size)
       // Pads with spaces to next double byte
       int nbPads = 5 - ( 2 * (size % 2) );
       for (int i = 0; i < nbPads; i ++)
-	write(1, " ", 1);
+	if (write(1, " ", 1)) {}
     }
   for (unsigned int i = 0; i < size; i ++)
     {
       charToWrite = savAddr[i];
       if ( (charToWrite < ' ') || (charToWrite > '~') )
 	charToWrite = '.';
-      write(1, &charToWrite, 1);
+      if (write(1, &charToWrite, 1)) {}
     }
-  write (1, "\n", 1);
+  if (write (1, "\n", 1)) {}
 }
 
 void *ft_print_memory(void *addr, unsigned int size)

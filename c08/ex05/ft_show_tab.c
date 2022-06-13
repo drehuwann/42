@@ -7,8 +7,8 @@ void pf_putstr(char *str)
   char EOL = '\n';
   char *pEOL = &EOL;
   while (*str)
-  write(1, str++, 1);
-  write(1, pEOL, 1);
+    if (write(1, str++, 1)) {}
+  if (write(1, pEOL, 1)) {}
 }
 
 #define INT_MIN -2147483648
@@ -18,7 +18,7 @@ void pf_putnbr(int nb)
 {
   if (nb == 0)
   {
-    write(1, "0", 1);
+    if (write(1, "0", 1)) {}
     return;
   }
   int negative = (nb < 0); // negative=0 -> positive; negative=1 -> negative
@@ -53,9 +53,9 @@ void pf_putnbr(int nb)
   while (pRevStr != debutRevStr)
   {
     pRevStr--;
-    write(1, pRevStr, 1);
+    if (write(1, pRevStr, 1)) {}
   }
-  write(1, pEOL, 1);
+  if (write(1, pEOL, 1)) {}
 }
 
 void ft_show_tab(struct s_stock_str *par)

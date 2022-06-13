@@ -36,9 +36,9 @@ void pf_printSolution(cell board[][BOARD_SIZE])
       if ( board[j][i] == queen )
 	{
 	  charToWrite = '0' + i;
-	  write(1, &charToWrite, 1);
+	  if (write(1, &charToWrite, 1)) {}
 	}
-  write(1, "\n", 1);
+  if (write(1, "\n", 1)) {}
 }
 
 void pf_nQueen(cell board[][BOARD_SIZE], int row)

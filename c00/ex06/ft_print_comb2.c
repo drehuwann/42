@@ -19,11 +19,11 @@ void ft_print_comb2(void)
         {
           couplet[4] = l;
           for (int c = 0; c <= 4; c++)
-            write(1, &couplet[c], 1);
+            if (write(1, &couplet[c], 1)) {}
           if ( ! (couplet[1] == '8' && couplet[0] == '9') )
           {
-            write(1, &virg, 1);
-            write(1, &space, 1);
+            if (write(1, &virg, 1)) {}
+            if (write(1, &space, 1)) {}
           }
         }
       }

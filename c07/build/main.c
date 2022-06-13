@@ -16,11 +16,12 @@ int pf_strcmp(char *s1, char *s2)
 
 void pf_test42(int i)
 {
-  if ( i == 42 )
-    write(1, "Y", 1);
-  else
-    write(1, "N", 1);
-  write(1, "\n", 1);
+  if ( i == 42 ) {
+    if (write(1, "Y", 1)) {}
+  } else {
+    if (write(1, "N", 1)) {}
+  }
+  if (write(1, "\n", 1)) {}
 }
 
 int main (void)

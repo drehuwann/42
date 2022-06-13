@@ -17,7 +17,7 @@ void pf_writeHex(char c)
   toPrint[1] = pf_hex(c / 16);
   toPrint[2] = pf_hex(c % 16);
   for (int i = 0; i < 3; i++)
-    write(1, &toPrint[i], 1);
+    if (write(1, &toPrint[i], 1)) {}
 }
 
 int pf_isPrintable(char c)
@@ -30,10 +30,11 @@ void ft_putstr_non_printable(char *str)
   char c = *str;
   while (c != 0)
     {
-      if ( pf_isPrintable(c) )
-	write (1, &c, 1);
-      else
+      if ( pf_isPrintable(c) ) {
+	if (write (1, &c, 1)) {}
+      } else {
 	pf_writeHex(c);
-      c= *(++str);
+      }
+      c = *(++str);
     }
 }

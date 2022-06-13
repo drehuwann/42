@@ -79,12 +79,12 @@ void ft_print_combn(int n)
       for (int c = 0; c < n; c++)
       {
 	charToWrite = '0' - 1 + nullKplet[c];
-	write(1, &charToWrite, 1);
+	if (write(1, &charToWrite, 1)) {}
       }
       if ( ! returnCode )
 	{
-	  write(1, &virg, 1);
-	  write(1, &space, 1);
+	  if (write(1, &virg, 1)) {}
+	  if (write(1, &space, 1)) {}
 	}
     } while ( ! returnCode );
 }

@@ -3,12 +3,14 @@
 #include "./protos.h"
 void pf_test42(int i)
 {
-  if ( i == 42 )
-    write(1, "Y", 1);
-  else
-    write(1, "N", 1);
-  write(1, "\n", 1);
+  if ( i == 42 ) {
+    if (write(1, "Y", 1)) {}
+  } else {
+    if (write(1, "N", 1)) {}
+  }
+  if (write(1, "\n", 1)) {}
 }
+
 void pf_testArrayOfInt()
 {
   int a1[8] = {7, 6, 5, 4, 3, 2, 1, 0};
@@ -16,21 +18,23 @@ void pf_testArrayOfInt()
   ft_rev_int_tab(a1, 8);
   for (int k = 0; k < 8; k++)
     {
-      if (a1[k] == k)
-	write(1, "Y", 1);
-      else
-	write(1, "N", 1);
+      if (a1[k] == k) {
+	if (write(1, "Y", 1)) {}
+      } else {
+	if (write(1, "N", 1)) {}
+      }
     }
-  write(1, "\n", 1);
+  if (write(1, "\n", 1)) {}
   ft_rev_int_tab(a2, 9);
   for (int k = 0; k < 9; k++)
     {
-      if (a2[k] == 2 * k)
-	write(1, "Y", 1);
-      else
-	write(1, "N", 1);
-    }  
-  write(1, "\n", 1);
+      if (a2[k] == 2 * k) {
+	if (write(1, "Y", 1)) {}
+      } else {
+	if (write(1, "N", 1)) {}
+      }
+    }
+  if (write(1, "\n", 1)) {}
 }
 
 void pf_testSortIntArray()
@@ -39,12 +43,13 @@ void pf_testSortIntArray()
   ft_sort_int_tab(arr2tst, 12);
   for (int i = 1; i < 12; i++)
     {
-      if ( arr2tst[i] < arr2tst[i-1] )
-	write(1, "N", 1);
-      else
-	write(1, "Y", 1);
+      if ( arr2tst[i] < arr2tst[i-1] ) {
+	if (write(1, "N", 1)) {}
+      } else {
+	if (write(1, "Y", 1)) {}
+      }
     }
-  write(1, "\n", 1);
+  if (write(1, "\n", 1)) {}
 }
 
 int main()

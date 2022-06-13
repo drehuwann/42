@@ -21,8 +21,8 @@ void ft_print_comb(void)
             write(1, &triplet[c], 1);
           if (triplet[0] != '7')
           {
-            write(1, &virg, 1);
-            write(1, &space, 1);
+            if (write(1, &virg, 1)) {}
+            if (write(1, &space, 1)) {}
           }
         }
       }

@@ -5,11 +5,12 @@
 
 void pf_test42(int i)
 {
-  if ( i == 42 )
-    write(1, "Y", 1);
-  else
-    write(1, "N", 1);
-  write(1, "\n", 1);
+  if ( i == 42 ) {
+    if (write(1, "Y", 1)) {}
+  } else {
+    if (write(1, "N", 1)) {}
+  }
+  if (write(1, "\n", 1)) {}
 }
 
 int main()
@@ -68,7 +69,7 @@ int main()
   pf_test42(sizeof(s2) - ft_strlcpy(s3, s2, 6) + 41);
   pf_test42(42 + strcmp("Salut\0", s3));
   ft_putstr_non_printable("Coucou\ntu vas bien ?");
-  write (1, "\n", 1);
+  if (write (1, "\n", 1)) {}
 
   ft_print_memory((void*)strSrc, 249);
 }                           
