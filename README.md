@@ -30,7 +30,7 @@ useful information.<br>
 2. <b><code>Makefile</code> :</b> To build the tests. Simply <code>chdir</code>
  or <code>pushd</code> to build directory and type <code>make</code><br>
  Alternatively, if test has failed : <code>make debug</code><br>
- Generally, it produces a <code>tst</cAde> file, that you can run with
+ Generally, it produces a <code>tst</code> file, that you can run with
  <code>./tst</code><br>
 3. <b><code>source files</code> :</b> required to build the tests.<br><br>
 ### Note about coding style
