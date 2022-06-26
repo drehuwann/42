@@ -1,7 +1,6 @@
 CC = gcc
 CFLAGS = -Wall  -Wextra -Werror
 SRCDIR = ./srcs
-OBJDIR = $(SRCDIR)
 HEADER = -Iincludes
 AR = ar rcs
 RM = rm -f
