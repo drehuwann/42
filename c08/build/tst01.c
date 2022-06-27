@@ -13,6 +13,7 @@ t_bool ft_is_even(int nbr)
 
 int main(int argc, char **argv)
 {
+  if (argv) {}  // remove warning unused variable argv
   if (ft_is_even(argc - 1) == TRUE)
     ft_putstr(EVEN_MSG);
   else

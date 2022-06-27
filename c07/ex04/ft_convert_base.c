@@ -1,19 +1,19 @@
 #include <stdlib.h>
 
-int pf_isspace(char c) // returns 0 -> false
+static int pf_isspace(char c) // returns 0 -> false
 {
   return ((c == 0x20) || (c == '\f') || (c == '\n') || (c == '\r') ||
 	  (c == '\t') || (c == '\v'));
 }
 
-int pf_is_Sign(char c) // returns -1 if '-'; +1 if '+'; 0 else
+static int pf_is_Sign(char c) // returns -1 if '-'; +1 if '+'; 0 else
 {
   if ( c == '-') return -1;
   if ( c == '+') return 1;
   return 0;
 }
 
-int pf_is_InBase(char c, char *base)
+static int pf_is_InBase(char c, char *base)
 //returns pos(from one for first) for true; 0 for false
 {
   int pos = 0;
@@ -27,7 +27,7 @@ int pf_is_InBase(char c, char *base)
   return 0;
 }
 
-unsigned int pf_test_Base(char *base)
+static unsigned int pf_test_Base(char *base)
 // returns 0 if base not valid, else returns baseSize
 {
   char c = *base;
@@ -47,7 +47,7 @@ unsigned int pf_test_Base(char *base)
   return baseSize;
 }
 
-int pf_atoi_base(char *str, char *base, int *errCode)
+static int pf_atoi_base(char *str, char *base, int *errCode)
 {
   int result = 0;
   int multiplier = 1; // to keep trace of the sign.
@@ -84,7 +84,7 @@ int pf_atoi_base(char *str, char *base, int *errCode)
   return (multiplier * result);
 }
 
-char * pf_itoa_base(int nb, char *base)
+static char *pf_itoa_base(int nb, char *base)
 {
   int baseSize = (int)pf_test_Base(base);
   if (baseSize == 0) return NULL;

@@ -1,11 +1,11 @@
-int pf_isSign(char c) // returns -1 if '-'; +1 if '+'; 0 else
+static int pf_isSign(char c) // returns -1 if '-'; +1 if '+'; 0 else
 {
   if ( c == '-') return -1;
   if ( c == '+') return 1;
   return 0;
 }
 
-int pf_isDigit(char c) // returns #c if c is digit, -1 else
+static int pf_isDigit(char c) // returns #c if c is digit, -1 else
 {
   if (( c >= '0') && ( c <= '9'))
     return (c - '0');

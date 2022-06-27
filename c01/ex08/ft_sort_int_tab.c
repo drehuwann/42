@@ -1,4 +1,4 @@
-void pf_fusion(int *tab, int *triagedTab, int indexBegin, int indexMid, \
+static void pf_fusion(int *tab, int *triagedTab, int indexBegin, int indexMid, \
 	       int indexEnd)
 {
   int indexTabA = indexBegin;
@@ -30,7 +30,7 @@ void pf_fusion(int *tab, int *triagedTab, int indexBegin, int indexMid, \
     }
 }
 
-void pf_triFusion(int *tab, int *triagedTab, int indexBegin, int indexEnd)
+static void pf_triFusion(int *tab, int *triagedTab, int indexBegin, int indexEnd)
 {
   if (indexBegin < indexEnd)
     {

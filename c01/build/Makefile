@@ -1,6 +1,6 @@
 THIS_FILE := $(lastword $(MAKEFILE_LIST))
 CC := gcc -Wall -Wextra -Werror $(DEBUG)
-
+RM := rm -f
 all:
 	${CC} -c ../ex00/ft_ft.c -o ./ft_ft.o
 	${CC} -c ../ex01/ft_ultimate_ft.c -o ./ft_ultimate_ft.o
@@ -16,3 +16,6 @@ all:
 
 debug:
 	$(MAKE) $(THIS_FILE) DEBUG="-g -D_DEBUG" all
+	
+clean:
+	$(RM) *.o tst

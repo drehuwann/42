@@ -1,5 +1,6 @@
 THIS_FILE := $(lastword $(MAKEFILE_LIST))
 CC := gcc -Wall -Wextra -Werror $(DEBUG)
+RM := rm -f
 
 all:
 	${CC} ../ex00/ft_print_program_name.c -o ./ft_print_program_name
@@ -9,3 +10,6 @@ all:
 
 debug:
 	$(MAKE) $(THIS_FILE) DEBUG="-g -D_DEBUG" all
+
+clean:
+	$(RM) *.o ft_print_program_name ft_print_params ft_rev_params ft_sort_params

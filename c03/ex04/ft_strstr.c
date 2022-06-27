@@ -1,4 +1,4 @@
-unsigned int pf_len(char * s)
+static unsigned int pf_len(char * s)
 {
   unsigned int out = 0;
   while (*s++)

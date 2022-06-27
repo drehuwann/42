@@ -13,7 +13,7 @@
 //* null_kPlet is defined as {0x00,0x00,..,0x00}
 //* returns 1 if kPletIsNull, else returns 0
 //* k is the size of kPlet
-int pf_kplet_isNull(int k, char *kPlet)
+static int pf_kplet_isNull(int k, char *kPlet)
 {
   for (int i = 0; i < k; i++)
     if (kPlet[i] != 0)
@@ -25,7 +25,7 @@ int pf_kplet_isNull(int k, char *kPlet)
  returns 0 if computed nPlet is not the last.
  assertion : input kplet must verify for any n :
  (n >= kPlet[n] > *kPlet[n-1] >= 1) **/
-int pf_nextKplet(char n, char k, char *kPlet)
+static int pf_nextKplet(char n, char k, char *kPlet)
 {
   char m = 0; // holds one element parmi n
   char h = 0; // index of the element in kPlet (from right to left)

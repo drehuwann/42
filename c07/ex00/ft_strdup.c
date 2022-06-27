@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int pf_strlen(char *str)
+static int pf_strlen(char *str)
 {
   int result = 0;
   while ( *str++ )

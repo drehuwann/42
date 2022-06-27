@@ -1,5 +1,6 @@
 THIS_FILE := $(lastword $(MAKEFILE_LIST))
 CC := gcc -Wall -Wextra -Werror $(DEBUG)
+RM := rm -f
 
 all:
 	${CC} -c ../ex00/ft_strcpy.c -o ./ft_strcpy.o
@@ -22,3 +23,6 @@ all:
 
 debug:
 	$(MAKE) $(THIS_FILE) DEBUG="-g -D_DEBUG" all
+
+clean:
+	$(RM) *.o tst

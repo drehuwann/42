@@ -2,7 +2,7 @@
 
 #include <stdlib.h>
 
-int pf_len(const char *str)
+static int pf_len(const char *str)
 {
   int result = 0;
   while ( *str++ )
@@ -10,7 +10,7 @@ int pf_len(const char *str)
   return result;
 }
 
-char *pf_strdup(char *src)
+static char *pf_strdup(char *src)
 {
   char *toReturn = (char*)(malloc(pf_len(src) + 1));
   char *initialStrPtr = toReturn;

@@ -6,7 +6,7 @@ typedef enum {queen, free} cell;
 
 int count = 0;
 
-int pf_isSafe(cell board[][BOARD_SIZE], int row, int col)
+static int pf_isSafe(cell board[][BOARD_SIZE], int row, int col)
 // returns 0 if not Safe; 1 if Safe
 {
   for (int i = 0; i < row; i++)
@@ -21,14 +21,14 @@ int pf_isSafe(cell board[][BOARD_SIZE], int row, int col)
   return 1; // Safe
 }
   
-void pf_newBoard(cell* pboard)
+static void pf_newBoard(cell* pboard)
 {
   cell *pos = pboard;
   for (int i = 0; i < BOARD_SIZE * BOARD_SIZE; i++)
     *pos ++ = free;
 }
 
-void pf_printSolution(cell board[][BOARD_SIZE])
+static void pf_printSolution(cell board[][BOARD_SIZE])
 {
   char charToWrite = '.';
   for (int j = 0; j < BOARD_SIZE; j ++)
@@ -41,7 +41,7 @@ void pf_printSolution(cell board[][BOARD_SIZE])
   if (write(1, "\n", 1)) {}
 }
 
-void pf_nQueen(cell board[][BOARD_SIZE], int row)
+static void pf_nQueen(cell board[][BOARD_SIZE], int row)
 {
   // if 'BOARD_SIZE' queens placed succesfully, print soluce & increment count
   if (row == BOARD_SIZE)

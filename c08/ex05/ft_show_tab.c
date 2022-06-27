@@ -2,7 +2,7 @@
 
 #include <unistd.h>
 
-void pf_putstr(char *str)
+static void pf_putstr(char *str)
 {
   char EOL = '\n';
   char *pEOL = &EOL;
@@ -14,7 +14,7 @@ void pf_putstr(char *str)
 #define INT_MIN -2147483648
 #define INT_MAX 2147483647
 
-void pf_putnbr(int nb)
+static void pf_putnbr(int nb)
 {
   if (nb == 0)
   {

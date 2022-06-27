@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void pf_writeArg(char *arg)
+static void pf_writeArg(char *arg)
 {
   char toWrite = *arg;
   while ( toWrite != 0 )

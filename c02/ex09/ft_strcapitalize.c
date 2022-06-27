@@ -1,19 +1,19 @@
-int pf_isUpcase(char c)
+static int pf_isUpcase(char c)
 {
   return ( (c >= 'A') && (c <='Z') );
 }
 
-int pf_isLowcase(char c)
+static int pf_isLowcase(char c)
 {
   return ( (c >= 'a') && (c <= 'z') );
 }
 
-int pf_isSep(char c)
+static int pf_isSep(char c)
 {
   return ( ( c == 0  ) || (c == 0x20) || ( c == '-') || ( c == '+') );
 }
 
-int pf_isAlpha(char c)
+static int pf_isAlpha(char c)
 {
   return ( pf_isLowcase(c) || pf_isUpcase(c) );
 }

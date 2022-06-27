@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-char pf_Hex(unsigned char c)
+static char pf_Hex(unsigned char c)
 {
   if ( c <= 9 )
     c += '0';
@@ -11,7 +11,7 @@ char pf_Hex(unsigned char c)
   return c;
 }
 
-void pf_printByte(unsigned char c)
+static void pf_printByte(unsigned char c)
 {
   char toPrint[2] = "00";
   toPrint[1] = pf_Hex(c % 16);
@@ -20,7 +20,7 @@ void pf_printByte(unsigned char c)
     if (write(1, &toPrint[i], 1)) {}
 }
 
-void pf_printAddr(unsigned long long ull)
+static void pf_printAddr(unsigned long long ull)
 {
   char toPrint[16] = "0000000000000000";
   for (int i = 15; i >= 0; i--)
@@ -32,7 +32,7 @@ void pf_printAddr(unsigned long long ull)
     if (write(1, &toPrint[i], 1)) {}
 }
 
-void pf_printDumpLine(void *addr, unsigned int size)
+static void pf_printDumpLine(void *addr, unsigned int size)
 {
   if (size == 0)
     return;

@@ -1,5 +1,6 @@
 THIS_FILE := $(lastword $(MAKEFILE_LIST))
 CC := gcc -Wall -Wextra -Werror $(DEBUG)
+RM := rm -f
 
 all:
 	${CC} -c ../ex00/ft_strdup.c -o ./ft_strdup.o
@@ -16,3 +17,6 @@ ft_convert_base.o ft_split.o main.o -o tst
 
 debug:
 	$(MAKE) $(THIS_FILE) DEBUG="-g -D_DEBUG" all
+
+clean:
+	$(RM) *.o tst

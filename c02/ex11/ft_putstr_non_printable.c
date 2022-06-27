@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-char pf_hex(char c)
+static char pf_hex(char c)
 {
   if ( c <= 9 )
     c += '0';
@@ -11,7 +11,7 @@ char pf_hex(char c)
   return c;
 }
 
-void pf_writeHex(char c)
+static void pf_writeHex(char c)
 {
   char toPrint[3] = { 0x5c, 0x5c, 0x5c }; // "\\\"
   toPrint[1] = pf_hex(c / 16);
@@ -20,7 +20,7 @@ void pf_writeHex(char c)
     if (write(1, &toPrint[i], 1)) {}
 }
 
-int pf_isPrintable(char c)
+static int pf_isPrintable(char c)
 {
   return ( ( c >= 0x20 ) && ( c <= '~' ) );
 }

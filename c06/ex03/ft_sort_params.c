@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void pf_writeArg(char *arg)
+static void pf_writeArg(char *arg)
 {
   char toWrite = *arg;
   while ( toWrite != 0 )
@@ -11,7 +11,7 @@ void pf_writeArg(char *arg)
     }
   write(1, "\n", 1);
 }
-int pf_strcmp(char *s1, char *s2)
+static int pf_strcmp(char *s1, char *s2)
 {
   char result = *s1 - *s2;
   while (result == 0)
@@ -23,7 +23,7 @@ int pf_strcmp(char *s1, char *s2)
   return (int)result;
 }
 
-void pf_insertion_sort(char **args, int size)
+static void pf_insertion_sort(char **args, int size)
 {
   for (int i = 0; i < size; i++)
     {

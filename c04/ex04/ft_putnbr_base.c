@@ -3,7 +3,7 @@
 #define INT_MIN -2147483648
 #define INT_MAX 2147483647
 
-int pf_isInBase(char c, char *base)
+static int pf_isInBase(char c, char *base)
 //returns pos(from one for first) for true; 0 for false
 {
   int pos = 0;
@@ -17,7 +17,7 @@ int pf_isInBase(char c, char *base)
   return 0;
 }
 
-unsigned int pf_testBase(char *base)
+static unsigned int pf_testBase(char *base)
 // returns 0 if base not valid, else returns baseSize
 {
   char c = *base;
@@ -37,7 +37,7 @@ unsigned int pf_testBase(char *base)
   return baseSize;
 }
 
-int pf_strLength(char *str)
+static int pf_strLength(char *str)
 {
   int out = 0;
   while (*str ++ != 0)
@@ -45,7 +45,7 @@ int pf_strLength(char *str)
   return out;
 }
 
-void pf_incr(char *str, char *base)
+static void pf_incr(char *str, char *base)
 {
   char lastC = str[pf_strLength(str) - 1];
   if ( lastC == base[pf_testBase(base) - 1])

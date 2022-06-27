@@ -1,14 +1,6 @@
 #include <stdlib.h>
 
-int pf_len(const char *str)
-{
-  int result = 0;
-  while ( *str++ )
-    result ++;
-  return result;
-}
-
-int pf_charIsSepa(const char cara, const char *charset)
+static int pf_charIsSepa(const char cara, const char *charset)
 /// returns int as bool 0=false, 1=true;
 {
   char *p_charset = (char*)charset;
@@ -20,7 +12,7 @@ int pf_charIsSepa(const char cara, const char *charset)
   return 0;
 }
 
-unsigned int pf_splitCount(const char *str, const char *charset)
+static unsigned int pf_splitCount(const char *str, const char *charset)
 {
   unsigned int result = 0;
   int inWord = 0; /// int as bool 0=false, 1=true
@@ -43,7 +35,7 @@ typedef struct {
   char *last;
 } borns;
 
-borns DoFirstSplitAndReturnBorns(const char *strToSplit,
+static borns DoFirstSplitAndReturnBorns(const char *strToSplit,
 				   const char *charset)
 {
   borns result;
