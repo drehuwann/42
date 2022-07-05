@@ -39,6 +39,8 @@ static borns DoFirstSplitAndReturnBorns(const char *strToSplit,
 				   const char *charset)
 {
   borns result;
+  result.first = NULL;
+  result.last = NULL;
   int wordHit = 0; // as bool false = 0; true = 1;
   while (*strToSplit)
     {
