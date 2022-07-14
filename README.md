@@ -39,6 +39,3 @@ formatted to fit in a 80*25 CGA environment ...<br>
 Nevertheless, if somebody has info about the specs of the <i>norminette</i>,
 please let me know, so maybe one day we'll code, in our spare time, a
 lightweight automatic <b><code>norminator</code></b> !#<br>
-
-
-

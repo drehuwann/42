@@ -13,7 +13,8 @@
 
 #define CHUNK_SIZE __SIZEOF_POINTER__    // 4 on x86; 8 on x86_64
 
-#ifndef BUFFERSIZE  // define BUFFERSIZE in Makefile : regulate using ulimit 60
+#ifndef BUFFERSIZE
+// define BUFFERSIZE in Makefile : regulate using ulimit -Ss 30
 #define BUFFERSIZE 512
 #endif
 
