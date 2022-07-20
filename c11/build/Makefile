@@ -1,0 +1,23 @@
+THIS_FILE := $(lastword $(MAKEFILE_LIST))
+CC := gcc -Wall -Wextra -Werror $(DEBUG)
+RM := rm -f
+
+all:
+	${CC} -c ../ex00/ft_foreach.c -I./ -o ft_foreach.o
+	${CC} -c ../ex01/ft_map.c -I./ -o ft_map.o
+	${CC} -c ../ex02/ft_any.c -I./ -o ft_any.o
+
+	${CC} -c ./main.c -o ./main.o
+
+	${CC} ./ft_foreach.o ./ft_map.o ./ft_any.o main.o -o tst
+
+debug:
+	$(MAKE) clean
+	$(MAKE) $(THIS_FILE) DEBUG="-g -D_DEBUG" all
+
+clean:
+	$(RM) ./*.o ./tst
+
+re:
+	$(MAKE) clean
+	$(MAKE) all
