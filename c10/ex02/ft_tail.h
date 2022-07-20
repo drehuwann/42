@@ -1,5 +1,5 @@
-#ifndef _FT_CAT_H_
-#define _FT_CAT_H_
+#ifndef _FT_TAIL_H_
+#define _FT_TAIL_H_
 
 #include <unistd.h>
 #include <fcntl.h>
@@ -44,4 +44,4 @@ const fifo_byte_buffer fbb_fault = {NULL, 0};
 ///@brief null-terminated array of byte_buffers 
 typedef fifo_byte_buffer *fifo_line_buffer;
 
-#endif  // _FT_CAT_H_
+#endif  // _FT_TAIL_H_

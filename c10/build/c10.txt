@@ -30,9 +30,9 @@ Turn-in directory : ex01/
 Files to turn in : Makefile, and files needed for your program
 Allowed functions : close, open, read, write, strerror, basename
 
-Create a program called ft_cat which does the same thing as the system’s cat
+Create a program called ft_cat which does the same thing as the systemâ€™s cat
 command-line.
-You don’t have to handle options.
+You donâ€™t have to handle options.
 The submission directory should have a Makefile with the following rules : all,
 clean, fclean.
 You may use the variable errno (check the man for Errno).
@@ -50,8 +50,8 @@ basename
 
 Create a program called ft_tail which does the same thing as the system command
 tail.
-The only option you have to handle is -c, but you don’t need to handle ’+’ or
-’-’ signs.
+The only option you have to handle is -c, but you don't need to handle '+' or
+'-' signs.
 all the test will be done with the -c option.
 The submission directory should have a Makefile with the following rules : all,
 clean, fclean.
@@ -64,7 +64,7 @@ Files to turn in : Makefile, and files needed for your program
 Allowed functions : close, open, read, write, malloc, free, strerror,
 basename
 
-Create a program called ft_hexdump which does the same thing as the system’s
+Create a program called ft_hexdump which does the same thing as the system's
 hexdump command-line without redirection.
 The only option you have to handle is -C.
 The submission directory should have a Makefile with the following rules : all,
