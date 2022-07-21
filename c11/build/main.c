@@ -80,6 +80,10 @@ int isEven(int n) {
     return ((n % 2) == 0);
 }
 
+int minus(int a, int b) {
+  return (a - b);
+}
+
 void eol() {
   if(write(1, &EOL, 1)) {}
 }
@@ -96,5 +100,37 @@ int main(int argc, char **argv) {
   }
   pf_test42(41 + ft_any(argv, is_printable));
   pf_test42(42 + ft_any(&(argv[1]), is_printable));
+  const char s1[3] = "42";
+  const char s2[3] = "\5\4";
+  const char s3[2] = "\005";
+  const char s4[2] = "\010";
+  const char s5[9] = "k-rent-2";
+  const char *strTab[5];
+  strTab[0] = s1;
+  strTab[1] = s2;
+  strTab[2] = s3;
+  strTab[3] = s4;
+  strTab[4] = s5;
+  pf_test42(40 + ft_count_if((char **)strTab, 5, is_printable));
+  pf_test42(42 + ft_is_sort(intTab, 16, minus));
+  unsigned int it = 0;
+  while (it < 16) {
+    intTab[it] = 42;
+    ++it;
+  }
+  pf_test42(41 + ft_is_sort(intTab, 16, minus));
+  intTab[0] = -64;
+  intTab[1] = -64;
+  intTab[2] = -11;
+  intTab[3] = 11;
+  intTab[4] = 18;
+  intTab[5] = 24;
+  intTab[6] = 41;
+  intTab[11] = 64;
+  intTab[12] = 150;
+  intTab[13] = 150;
+  intTab[14] = 153;
+  intTab[15] = 164;
+  pf_test42(41 + ft_is_sort(intTab, 16, minus));
   return argc;
 }
