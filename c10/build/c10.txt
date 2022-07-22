@@ -30,9 +30,9 @@ Turn-in directory : ex01/
 Files to turn in : Makefile, and files needed for your program
 Allowed functions : close, open, read, write, strerror, basename
 
-Create a program called ft_cat which does the same thing as the systemâ€™s cat
+Create a program called ft_cat which does the same thing as the system's cat
 command-line.
-You donâ€™t have to handle options.
+You don't have to handle options.
 The submission directory should have a Makefile with the following rules : all,
 clean, fclean.
 You may use the variable errno (check the man for Errno).
