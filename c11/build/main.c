@@ -15,6 +15,20 @@ int intTab[16] = {
     14, 0, 16, 32,
     123456, 7890, -98765, -43210};
 
+static ssize_t pf_len(const char *str) {
+  ssize_t toRet = 0;
+  if (!str) return -1;
+  while(*str) {
+    ++ toRet;
+    ++ str;
+  }
+  return toRet;
+}
+
+static int isBigger(char *s1, char *s2) {
+  return (int)(pf_len((const char *)s1) - pf_len((const char *)s2));
+}
+
 static ssize_t pf_print(const char *str) {
   ssize_t toRet = 0;
   const char eol = '\n';
@@ -213,9 +227,25 @@ int main(int argc, char **argv) {
   char *str = (char*)0;
   ft_sort_string_tab(strTab);
   it = argc - argc; //use argc and sets it to 0
-  while ((str = *strTab) != (char *)0) {
-    it += (int)pf_print((const char *)(*strTab));
-    ++strTab;
+  while ((str = strTab[it]) != (char *)0) {
+    if (pf_print((const char *)str)) {}
+    ++it;
   }
-  return it;
+  it = 0;
+  ft_advanced_sort_string_tab(strTab, &isBigger);
+  while ((str = strTab[it]) != (char *)0) {
+    if (pf_print((const char *)str)) {}
+    ++ it;
+  }
+  it = 0;
+  ft_advanced_sort_string_tab(strTab, ft_strcmp);
+  while ((str = strTab[it]) != (char *)0) {
+    if (pf_print((const char *)str)) {}
+    ++ it;
+  }
+  if (strTab) {
+    free(strTab);
+    strTab = (char **)0;
+  }
+  return 0;
 }
