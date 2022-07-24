@@ -11,13 +11,14 @@ all:
 	${CC} -c ../ex05/ft_list_push_strs.c -I./ -o ft_list_push_strs.o
 	${CC} -c ../ex06/ft_list_clear.c -I./ -o ft_list_clear.o
 	${CC} -c ../ex07/ft_list_at.c -I./ -o ft_list_at.o
+	${CC} -c ../ex08/ft_list_reverse.c -I./ -o ft_list_reverse.o
 
 	${CC} -c ../../c07/ex00/ft_strdup.c -o ./ft_strdup.o
 	${CC} -c ./main.c -o ./main.o
 
 	${CC} ./ft_create_elem.o ./ft_list_push_front.o ./ft_list_size.o \
 ./ft_list_last.o ./ft_list_push_back.o ft_list_push_strs.o ./ft_list_clear.o \
-./ft_list_at.o ./ft_strdup.o ./main.o -o tst
+./ft_list_at.o ./ft_list_reverse.o ./ft_strdup.o ./main.o -o tst
 
 	echo "!! Test with : 'valgrind -q ./tst'"
 

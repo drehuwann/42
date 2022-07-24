@@ -71,5 +71,12 @@ int main() {
     print("FAIL: ft_list_at out of bounds should return NULL");
   }
   it = 0;
+  el = el_remainder;
+  ft_list_reverse(&el);
+  it = 0;
+  while(it < (unsigned int)ft_list_size(el)) {
+    print((const char *)((ft_list_at(el, it))->data));
+    ++ it;
+  }
   ft_list_clear(el, free);
 }
