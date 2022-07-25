@@ -21,6 +21,10 @@ static void free_elem(t_list *el) {
   }
 }
 
+static void genfn(void *data) {
+  if (ft_strupcase((char *)data)) {}
+}
+
 int main() {
   char str[] = "Tea for two";
   char st2[] = "Two for tea";
@@ -52,16 +56,16 @@ int main() {
   strs[1] = ft_strdup(st2);
   strs[2] = ft_strdup(str);
   el = ft_list_push_strs(3, strs);
+  t_list *first = el;
   if (strs) {
     free(strs);
     strs = NULL;
   }
-  t_list *el_remainder = el;
   while (el) {
     print((char *)(el->data));
     el = el->next;
   }
-  el = el_remainder;
+  el = first;
   unsigned int it = 0;
   while(it < (unsigned int)ft_list_size(el)) {
     print((const char *)((ft_list_at(el, it))->data));
@@ -70,10 +74,15 @@ int main() {
   if (ft_list_at(el, it) || ft_list_at(el, 0xff)) {
     print("FAIL: ft_list_at out of bounds should return NULL");
   }
-  it = 0;
-  el = el_remainder;
+  el = first;
   ft_list_reverse(&el);
   it = 0;
+  while(it < (unsigned int)ft_list_size(el)) {
+    print((const char *)((ft_list_at(el, it))->data));
+    ++ it;
+  }
+  it = 0;
+  ft_list_foreach(el, genfn);
   while(it < (unsigned int)ft_list_size(el)) {
     print((const char *)((ft_list_at(el, it))->data));
     ++ it;

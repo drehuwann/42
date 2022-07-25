@@ -12,15 +12,18 @@ all:
 	${CC} -c ../ex06/ft_list_clear.c -I./ -o ft_list_clear.o
 	${CC} -c ../ex07/ft_list_at.c -I./ -o ft_list_at.o
 	${CC} -c ../ex08/ft_list_reverse.c -I./ -o ft_list_reverse.o
+	${CC} -c ../ex09/ft_list_foreach.c -I./ -o ft_list_foreach.o
 
 	${CC} -c ../../c07/ex00/ft_strdup.c -o ./ft_strdup.o
+	${CC} -c ../../c02/ex07/ft_strupcase.c -o ./ft_strupcase.o
 	${CC} -c ./main.c -o ./main.o
 
 	${CC} ./ft_create_elem.o ./ft_list_push_front.o ./ft_list_size.o \
 ./ft_list_last.o ./ft_list_push_back.o ft_list_push_strs.o ./ft_list_clear.o \
-./ft_list_at.o ./ft_list_reverse.o ./ft_strdup.o ./main.o -o tst
+./ft_list_at.o ./ft_list_reverse.o ./ft_list_foreach.o ./ft_strdup.o \
+./ft_strupcase.o ./main.o -o tst
 
-	echo "!! Test with : 'valgrind -q ./tst'"
+	@echo "!! Test with : 'valgrind -q ./tst'"
 
 debug:
 	$(MAKE) clean
