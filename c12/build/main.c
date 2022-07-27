@@ -25,6 +25,18 @@ static void genfn(void *data) {
   if (ft_strupcase((char *)data)) {}
 }
 
+static void genfn2(void *data) {
+  if (ft_strlowcase((char *)data)) {}
+}
+
+void printList(t_list *el) {
+  unsigned int it = 0;
+  while(it < (unsigned int)ft_list_size(el)) {
+    print((const char *)((ft_list_at(el, it))->data));
+    ++ it;
+  }
+}
+
 int main() {
   char str[] = "Tea for two";
   char st2[] = "Two for tea";
@@ -66,26 +78,31 @@ int main() {
     el = el->next;
   }
   el = first;
-  unsigned int it = 0;
-  while(it < (unsigned int)ft_list_size(el)) {
-    print((const char *)((ft_list_at(el, it))->data));
-    ++ it;
-  }
-  if (ft_list_at(el, it) || ft_list_at(el, 0xff)) {
+  printList(el);
+  if (ft_list_at(el, ft_list_size(el)) || ft_list_at(el, 0xff)) {
     print("FAIL: ft_list_at out of bounds should return NULL");
   }
   el = first;
   ft_list_reverse(&el);
-  it = 0;
-  while(it < (unsigned int)ft_list_size(el)) {
-    print((const char *)((ft_list_at(el, it))->data));
-    ++ it;
-  }
-  it = 0;
+  printList(el);
   ft_list_foreach(el, genfn);
-  while(it < (unsigned int)ft_list_size(el)) {
-    print((const char *)((ft_list_at(el, it))->data));
-    ++ it;
+  printList(el);
+  ft_list_foreach_if(el, genfn2, "FOR TEA TWO", ft_strcmp);
+  printList(el);
+  print("ft_list_find returns :");
+  t_list *firstHit = ft_list_find(el, "TWO FOR TEA", ft_strcmp);
+  if (firstHit) {
+    print ((const char *)(firstHit->data));
+  } else {
+    print("Not found");
   }
+  ft_list_push_front(&el, (void *)(ft_strdup("TWO FOR TEA")));
+  ft_list_push_back(&el, (void *)(ft_strdup("TWO FOR TEA")));
+  ft_list_push_front(&el, (void *)(ft_strdup("TWO FOR TEA")));
+  print("list is now:");
+  printList(el);
+  ft_list_remove_if(&el, "TWO FOR TEA", ft_strcmp, free); 
+  print("after remove_if, list is :");
+  printList(el);
   ft_list_clear(el, free);
 }
