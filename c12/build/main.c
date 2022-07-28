@@ -104,5 +104,28 @@ int main() {
   ft_list_remove_if(&el, "TWO FOR TEA", ft_strcmp, free); 
   print("after remove_if, list is :");
   printList(el);
+  strs = (char **)malloc(3 * sizeof(char *));
+  strs[0] = ft_strdup(st3);
+  strs[1] = ft_strdup(st2);
+  strs[2] = ft_strdup(str);
+  ft_list_merge(&el, ft_list_push_strs(3, strs));
+  if (strs) {
+    free(strs);
+    strs = NULL;
+  }
+  print("after merge, list is :");
+  printList(el);
+  ft_list_sort(&el, ft_strcmp);
+  print("after sort, list is :");
+  printList(el);
+  print("sorting already triaged list gives :");
+  ft_list_sort(&el, ft_strcmp);
+  printList(el);
+  print("reversing list gives :");
+  ft_list_reverse(&el);
+  printList(el);
+  print("sorting reversed list :");
+  ft_list_sort(&el, ft_strcmp);
+  printList(el);
   ft_list_clear(el, free);
 }
