@@ -134,5 +134,15 @@ int main() {
   ft_list_push_back(&el, (void*)ft_strdup("FOR TEA TWO"));
   ft_list_reverse_fun(el);
   printList(el);
+  ft_list_sort(&el, ft_strcmp);
+  print ("inserting 'Tea Two For' in sorted list");
+  ft_sorted_list_insert(&el, ft_strdup("Tea Two For"), ft_strcmp);
+  printList(el);
+  print ("inserting 'tea Two For' in sorted list");
+  ft_sorted_list_insert(&el, ft_strdup("tea Two For"), ft_strcmp);
+  printList(el);
+  print ("inserting 'FOR TEA TOO' in sorted list");
+  ft_sorted_list_insert(&el, ft_strdup("FOR TEA TOO"), ft_strcmp);
+  printList(el);
   ft_list_clear(el, free);
 }
