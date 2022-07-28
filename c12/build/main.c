@@ -127,5 +127,12 @@ int main() {
   print("sorting reversed list :");
   ft_list_sort(&el, ft_strcmp);
   printList(el);
+  print("last reversed by value gives :");
+  ft_list_reverse_fun(el);
+  printList(el);
+  print("after pushing back 'FOR TEA TWO', reversed by value gives :");
+  ft_list_push_back(&el, (void*)ft_strdup("FOR TEA TWO"));
+  ft_list_reverse_fun(el);
+  printList(el);
   ft_list_clear(el, free);
 }
