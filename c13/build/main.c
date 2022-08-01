@@ -69,6 +69,13 @@ int main() {
   myPrint(btree_search_item(new_tree, (void *)("Luke"), cmpfn));
   print("searching 'Vador' :");
   myPrint(btree_search_item(new_tree, (void *)("Vador"), cmpfn));
+  print("depth of el :");
+  ft_putnbr(btree_level_count(el));
+  print("\ndepth of new_tree :");
+  ft_putnbr(btree_level_count(new_tree));
+  print("\ndepth of (b_tree *)0 :");
+  ft_putnbr(btree_level_count((t_btree *)0));
+  print("\n");
   freeTree(new_tree);
   freeTree(el);
   return 0;
