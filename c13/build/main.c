@@ -4,7 +4,10 @@
 #include <unistd.h>
 
 static void print(const char *s) {
-  if (s == NULL) print("can't dereference nullptr");
+  if (s == NULL) {
+    print("can't dereference nullptr");
+    return;
+  }
   char eol = '\n';
   while (*s) {
     if (write(1, s, 1)) {}
@@ -62,6 +65,10 @@ int main() {
   btree_insert_data(&new_tree, (void *)ft_strdup("Luke"), &cmpfn);
   print("Infix reading");
   btree_apply_infix(new_tree, myPrint);
+  print("searching 'Luke' :");
+  myPrint(btree_search_item(new_tree, (void *)("Luke"), cmpfn));
+  print("searching 'Vador' :");
+  myPrint(btree_search_item(new_tree, (void *)("Vador"), cmpfn));
   freeTree(new_tree);
   freeTree(el);
   return 0;
