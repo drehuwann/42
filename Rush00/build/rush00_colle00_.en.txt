@@ -12,9 +12,8 @@ Allowed functions : write
 Files to submit: main.c, ft_putchar.c and your rush0X.c, ’0X’ represents the
 rush number. For example rush00.c.
 Example of main.c :
-main()
 
-int
+int main()
 {
   rush(5, 5);
   return (0);
@@ -27,9 +26,8 @@ width, and y characters for length.
 Your main will be modified during defense, to check if you’ve handled
 everything you’re supposed to. Here’s an example of test we’ll perform :
 
-int
+int main()
 {
-  main()
   rush(123, 42);
   return (0);
 }
@@ -66,7 +64,7 @@ $>
 
 7
 
-C Piscine
+C Piscine
 
 Rush 00
 
@@ -80,7 +78,7 @@ $>
 
 8
 
-Chapter V
+Chapter V
 Rush 01
 rush(5,3) should display :
 $>./a.out
@@ -108,7 +106,7 @@ $>./a.out
 \
 $>
 
-• rush(4, 4) should display :
+rush(4, 4) should display :
 $>./a.out
 /**\
 *  *
