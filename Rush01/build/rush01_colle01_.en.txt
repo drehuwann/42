@@ -1,0 +1,63 @@
+C Piscine
+Rush 01
+Chapter III
+subject
+Exercise 00
+Rush-01
+Turn-in directory : ex00/
+Files to turn in : All necessary files
+Allowed functions : write, malloc, free
+
+Your source code will be compiled as follows:
+gcc -Wall -Wextra -Werror -o rush-01 *.c
+Your submission directory must have all files required to compile your program.
+
+Create a program that solves the following problem:
+Given a map of 4x4, place boxes of height 1 to 4 on each available square in a
+way that every row and column sees the correct number of boxes from each the
+possible points of view (left/right for rows, up/down for columns).
+Ex: The box of height 3 will hide the box of height 1 from the left, so we
+have 3 visible boxes, and only one from the right, because the box of height 4
+is hiding everything.
+
+Each of the views (2 per row and 2 per column) will have a given value. Your
+program must place the boxes correctly, while making sure each row and column
+only has one box of each size.
+Your output will contain the first solution you encounter
+Here’s how we’ll launch your program :
+> ./rush-01 "col1up col2up col3up col4up col1down col2down col3down col4down \
+row1left row2left row3left row4left row1right row2right row3right row4right"
+(cf. annex 1)
+
+"col1up" is the value for the left column upper point of view. Each of these
+represent a characters string of values ranged between ’1’ and ’4’.
+This is the ONLY acceptable input for your program. Any other input must be
+considered an error.
+
+Here’s an example of intended input/output for a valid set.
+./rush-01 "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2" | cat -e
+1 2 3 4$
+2 3 4 1$
+3 4 1 2$
+4 1 2 3$
+(cf. annex 2 and 3)
+
+In case of error or if you can’t find any solutions, display "Error" followed
+by a line break.
+
+
+Chapter IV
+Annexe
+What follows is an artistic view of your program. Obviously, you need to turn
+in a program as described in the previous chapter.
+These representations’ only goal is to help you understand the project.
+
+Annex 1:
+Representation of your program using col_up, col_down, row_left and row_right
+
+Annex 2:
+By replacing col* et row*, we get this.
+
+Annexe 3:
+Your program must fill in the blanks inside using the rules given in the first
+part.
