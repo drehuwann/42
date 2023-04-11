@@ -23,6 +23,6 @@ void ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)()) {
   }
   if (!inserted) {
     newelem->next = (t_list *)0;
-    last_elem->next = newelem;
+    if (last_elem) last_elem->next = newelem;
   }
 }
