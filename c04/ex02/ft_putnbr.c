@@ -11,7 +11,6 @@ void ft_putnbr(int nb)
     return;
   }
   int negative = (nb < 0); // negative=0 -> positive; negative=1 -> negative
-  char reste = 0;
   char reversedStr[11] = "8463847412"; //stores (string)nb from right to left
   // default value is INT_MIN
   char *debutRevStr = &reversedStr[0];
@@ -28,7 +27,7 @@ void ft_putnbr(int nb)
       nb *= -1;
     while ( nb != 0 )
     {
-      reste = nb % 10;
+      char reste = nb % 10;
       nb /= 10;
       char c = (char)('0' + reste);
       *pRevStr = c;

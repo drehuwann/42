@@ -24,7 +24,7 @@ static unsigned int pf_testBase(char *base)
   unsigned int baseSize = 0;
   while ( c != 0 )
     {
-      if (( c == '+') || ( c== '-' ))
+      if ((c == '+') || (c == '-'))
 	return 0;
       base ++;
       if (pf_isInBase(c, base))
@@ -69,7 +69,6 @@ void ft_putnbr_base(int nb, char *base)
     return;
   
   int negative = (nb < 0); // negative=0 -> positive; negative=1 -> negative
-  int reste = 0;
   char reversedStr[64]; // max length of a int in base 2
   char *debutRevStr = &reversedStr[0];
   char *pRevStr = debutRevStr;
@@ -83,7 +82,7 @@ void ft_putnbr_base(int nb, char *base)
     nb *= -1;
   while ( nb != 0 )
     {
-      reste = nb % baseSize;
+      int reste = nb % baseSize;
       nb /= baseSize;
       char c = base[reste];
       if (( nb == 0 ) && ( intMinHit == 1))
