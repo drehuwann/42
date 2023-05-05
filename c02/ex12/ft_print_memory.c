@@ -36,17 +36,16 @@ static void pf_printDumpLine(void *addr, unsigned int size)
 {
   if (size == 0)
     return;
-  unsigned char charToWrite = 0 ;
-  unsigned char *savAddr= (unsigned char*)addr;
+  unsigned char *byteptr = (unsigned char*)addr;
   pf_printAddr((unsigned long long)addr);
   if (write(1, ":", 1)) {}
   if (write(1, " ", 1)) {}
   for (unsigned int i = 0; i < size; i ++)
     {
-      pf_printByte( *((unsigned char*)addr) );
+      pf_printByte(*byteptr);
       if ( i % 2 != 0 )
 	if (write(1, " ", 1)) {}
-      (unsigned char*)addr ++;
+      byteptr ++;
     }
   if ( size < 16 )
     {
@@ -57,7 +56,7 @@ static void pf_printDumpLine(void *addr, unsigned int size)
     }
   for (unsigned int i = 0; i < size; i ++)
     {
-      charToWrite = savAddr[i];
+      unsigned char charToWrite = ((unsigned char *)addr)[i];
       if ( (charToWrite < ' ') || (charToWrite > '~') )
 	charToWrite = '.';
       if (write(1, &charToWrite, 1)) {}
@@ -67,14 +66,14 @@ static void pf_printDumpLine(void *addr, unsigned int size)
 
 void *ft_print_memory(void *addr, unsigned int size)
 {
-  void *savAddr = addr;
+  unsigned char *byteptr = (unsigned char *)addr;
   unsigned int lineSize = 16;
   unsigned int nbFullLines = size / 16;
   while (nbFullLines --)
     {
-      pf_printDumpLine(addr, lineSize);
-      addr += lineSize;
+      pf_printDumpLine(byteptr, lineSize);
+      byteptr += lineSize;
     }
-  pf_printDumpLine(addr, size % 16);
-  return savAddr;
+  pf_printDumpLine(byteptr, size % 16);
+  return addr;
 }
