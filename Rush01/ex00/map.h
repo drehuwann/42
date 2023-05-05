@@ -52,6 +52,7 @@ char map_read_at(const t_map *map, const t_coord coord);
 t_line *get_line(const t_map *map, t_pov pov, short int num);
 
 /*! @brief returns the number of seen boxes, looking at line from line[0].
+ * @warning this function frees *p_line
  * @return -1 on error */
 int seen(t_line *p_line);
 

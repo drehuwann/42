@@ -121,7 +121,7 @@ int seen(t_line *p_line) {
     }
     ++ it;
   }
-  if (p_line) free(p_line);
+  free(p_line);
   return toRet;
 }
 
