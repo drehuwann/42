@@ -20,13 +20,13 @@ void err() {
 
 void displaymap(const t_map *map) {
   short int ity = 0;
-  t_coord coords;
+  t_coord coor;
   while (ity < MAPSIZE) {
     short int itx = 0;
     while (itx < MAPSIZE) {
-      coords.x = itx;
-      coords.y = ity;
-      putchr(map_read_at(map, coords));
+      coor.x = itx;
+      coor.y = ity;
+      putchr(map_read_at(map, coor));
       putchr(0x20);
       ++ itx;
     }
