@@ -6,7 +6,7 @@ static unsigned int pf_strlen(char * s)
   return out;
 }
 
-char * ft_strncat(char *dest, char *src, unsigned int nb)
+char *ft_strncat(char *dest, const char *src, unsigned int nb)
 {
   unsigned int dest_len = pf_strlen(dest);
   unsigned int i = 0;
