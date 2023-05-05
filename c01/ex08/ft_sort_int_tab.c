@@ -1,10 +1,8 @@
-static void pf_fusion(int *tab, int *triagedTab, int indexBegin, int indexMid, \
-	       int indexEnd)
-{
+static void pf_fusion(const int *tab, int *triagedTab, int indexBegin,
+		      int indexMid, int indexEnd) {
   int indexTabA = indexBegin;
   int indexTabB = indexMid + 1;
-  int indexTriagedTab = indexBegin;
-  for (indexTriagedTab = indexBegin; indexTriagedTab <= indexEnd; \
+  for (int indexTriagedTab = indexBegin; indexTriagedTab <= indexEnd;
        indexTriagedTab ++)
     {
       if ( indexTabA == indexMid + 1 )
