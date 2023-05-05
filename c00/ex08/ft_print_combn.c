@@ -13,7 +13,7 @@
 //* null_kPlet is defined as {0x00,0x00,..,0x00}
 //* returns 1 if kPletIsNull, else returns 0
 //* k is the size of kPlet
-static int pf_kplet_isNull(int k, char *kPlet)
+static int pf_kplet_isNull(int k, const char *kPlet)
 {
   for (int i = 0; i < k; i++)
     if (kPlet[i] != 0)
@@ -69,7 +69,6 @@ void ft_print_combn(int n)
   for (int i = 0; i < n; i++)
     nullKplet[i] = 0; // Set initial k_plet full of zeros
   k_plet *pKplet = &nullKplet;
-  char charToWrite = '\0';
   int returnCode = 0;
 
   do 
@@ -78,7 +77,7 @@ void ft_print_combn(int n)
       // Ecriture resultats en console
       for (int c = 0; c < n; c++)
       {
-	charToWrite = '0' - 1 + nullKplet[c];
+	char charToWrite = '0' - 1 + nullKplet[c];
 	if (write(1, &charToWrite, 1)) {}
       }
       if ( ! returnCode )
