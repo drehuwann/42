@@ -9,7 +9,7 @@ const char eol = '\n';
 
 void ft_putchar(char c);
 
-void printline(int size, char triplet[3]) {
+void printline(int size, const char triplet[3]) {
   if (size < 1) return;
   int it = 0;
   char c;
